@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   resources :news, only: [:index, :show]
   resources :team, only: [:index, :show]
+  resources :gallery, only: [:index]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,47 +1,77 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Obv1ous</title>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+    <title>Obv1ous</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
 </head>
 <body>
-<header>
-    <div class="header-background">
+    <header>
+        <div class="header-background">
 
-    </div>
-    <!-- Dropdown Structure -->
-    <nav>
-    <div class="container">
-        <div class="row">
-       <div class="nav-wrapper col s12">
-           <ul class="left hide-on-med-and-down">
-           <li><a href="sass.html">News</a></li>
-           <li><a href="badges.html">Team</a></li>
-           <li><a href="badges.html">Galerie</a></li>
-           <!-- Dropdown Trigger -->
-         </ul>
-         <ul class="right hide-on-med-and-down">
-             <li><a href="badges.html">Connexion</a></li>
-             <li><a href="badges.html">Inscription</a></li>
-         </ul>
-       </div>
-   </div>
-    </div>
-     </nav>
-</header>
-    <% if notice %>
-    <p class="alert alert-success"><%= notice %></p>
-    <% end %>
-    <% if alert %>
-    <p class="alert alert-danger"><%= alert %></p>
-    <% end %>
+        </div>
+        <!-- Dropdown Structure -->
+        <nav>
+            <div class="container">
+                <div class="row">
+                    <div class="nav-wrapper col s12">
+                        <ul class="left hide-on-med-and-down">
+                            <li><%= link_to 'News', root_path %><li>
+                            <li><%= link_to 'Team', team_index_path %></li>
+                            <li><%= link_to 'Galerie', gallery_index_path %></li>
+                        </ul>
+                        <ul class="right hide-on-med-and-down">
+                            <% if user_signed_in? %>
+                                <%= link_to 'Déconnexion', destroy_user_session_path, :id => "logout", :method => :delete %>
+                            <% else %>
+                                <li><%= link_to 'Connexion', new_user_session_path %></li>
+                                <li><%= link_to 'Inscription', new_user_registration_path %></li>
+                            <% end %>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <div class="container content">
+        <% if notice %>
+            <p class="alert alert-success"><%= notice %></p>
+        <% end %>
+        <% if alert %>
+            <p class="alert alert-danger"><%= alert %></p>
+        <% end %>
+    
         <%= yield %>
     </div>
 
+
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Footer Content</h5>
+            <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2015 Copyright Obv1ous
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+      </div>
+    </footer>
 </body>
 </html>

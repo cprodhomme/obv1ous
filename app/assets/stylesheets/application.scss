@@ -22,8 +22,8 @@
 body{
     background: #eceff1;
 }
-header{
 
+header{
     .header-background{
         height:180px;
         width:100%;
@@ -32,12 +32,13 @@ header{
         background-size: cover;
     }
 }
+
 .clear{
     clear: both;
 }
+
 .content{
     background: #fff;
-    min-height:400px;
 
     .TwitchIndex{
         text-align: center;
