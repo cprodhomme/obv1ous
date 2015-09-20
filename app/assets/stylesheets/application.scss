@@ -30,6 +30,18 @@ header{
         background-image:url("/assets/head.png");
         background-repeat: no-repeat;
         background-size: cover;
+
+        .logo_obv{
+            background-image: url("/assets/logo-trans.png");
+            width: 150px;
+            height: 170px;
+            margin: auto;
+            padding-top: 20px;
+            background-size: contain;
+            background-position: bottom;
+            background-repeat: no-repeat;
+            // background-color: red;
+        }
     }
 }
 
@@ -50,6 +62,5 @@ header{
     }
     .card{
         margin:10px;
-        margin-right:0px;
     }
 }

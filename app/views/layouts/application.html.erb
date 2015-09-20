@@ -8,15 +8,32 @@
     <%= csrf_meta_tags %>
 </head>
 <body>
+    <script type="text/javascript">
+    $( document ).ready(function(){
+        $(".button-collapse").sideNav();
+    });
+
+    </script>
     <header>
         <div class="header-background">
+            <div class="logo_obv">
 
+            </div>
         </div>
         <!-- Dropdown Structure -->
         <nav>
             <div class="container">
                 <div class="row">
                     <div class="nav-wrapper col s12">
+                        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                        <ul class="side-nav" id="mobile-demo">
+                            <li><%= link_to 'News', root_path %></li>
+                            <li><%= link_to 'Team', team_index_path %></li>
+                            <li><%= link_to 'Galerie', gallery_index_path %></li>
+                            <li class="divider"></li>
+                            <li><%= link_to 'Connexion', new_user_session_path %></li>
+                            <li><%= link_to 'Inscription', new_user_registration_path %></li>
+                        </ul>
                         <ul class="left hide-on-med-and-down">
                             <li><%= link_to 'News', root_path %><li>
                             <li><%= link_to 'Team', team_index_path %></li>
@@ -43,7 +60,7 @@
         <% if alert %>
             <p class="alert alert-danger"><%= alert %></p>
         <% end %>
-    
+
         <%= yield %>
     </div>
 
