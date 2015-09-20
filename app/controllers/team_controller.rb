@@ -1,10 +1,10 @@
 class TeamController < ApplicationController
 
     def index
-    	@team = Team.order('id desc')
+    	@team = TeamMember.order('id desc')
     end
 
     def show
-    	@member = Team.find(params[:id])
+    	@member = TeamMember.find(params[:id])
     end
 end
