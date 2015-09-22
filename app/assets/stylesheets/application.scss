@@ -44,8 +44,9 @@ header{
         }
     }
 }
-.inline{
-    display: inline-block;
+.row{
+    margin-bottom: 0;
+    padding-bottom: 20px;
 }
 .clear{
     clear: both;
@@ -65,6 +66,15 @@ header{
     .card{
         margin:10px 0;
     }
+    .btnlog{
+        margin: 10px;
+    }
+    .new_user{
+        margin-top: 20px;
+    }
+}
+.page-footer{
+    margin-top: 0px !important;
 }
 .waves-button-input{
     border:none;
