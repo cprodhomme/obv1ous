@@ -35,9 +35,10 @@
                             <li><%= link_to 'Team', team_index_path %></li>
                             <li><%= link_to 'Galerie', gallery_index_path %></li>
                         </ul>
-                        <ul class="right hide-on-med-and-down">
+                        <ul class="right hide-on-med-and-down ">
                             <% if user_signed_in? %>
-                                <%= link_to 'Déconnexion', destroy_user_session_path, :id => "logout", :method => :delete %>
+                                <li><a href="#">Pseudo</a></li>
+                                <li><%= link_to 'Déconnexion', destroy_user_session_path, :id => "logout", :method => :delete %><li>
                             <% else %>
                                 <li><%= link_to 'Connexion', new_user_session_path %></li>
                                 <li><%= link_to 'Inscription', new_user_registration_path %></li>
