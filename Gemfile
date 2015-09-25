@@ -31,6 +31,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'devise-i18n'
 
+# Use CanCan (permission)
+gem 'cancan'
+
 # Use carrierwave
 gem 'carrierwave'
 
