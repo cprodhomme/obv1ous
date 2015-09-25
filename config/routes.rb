@@ -10,6 +10,11 @@ Rails.application.routes.draw do
   resources :team, only: [:index, :show]
   resources :gallery, only: [:index]
 
+  namespace :admin do
+    get '/' => 'dashboard#index'
+    resources :dashboard
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
