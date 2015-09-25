@@ -6,7 +6,8 @@ class Ability
 		if user.admin?
 		  	can :manage, :all
 		else
-			can [:read], [welcome, gallery, team]
+			can :manage, :all
+			#can [:read], [welcome, gallery, team]
 		end
 	end
 end
