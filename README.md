@@ -9,7 +9,6 @@
 
 **Screenshot :**
 
-
-**à faire au démarage de la plateforme :**
+**à faire au démarrage de la plateforme :**
 - [app/models/user.rb] - mettre le champ "admin" à false par défaut
 - Crée des utilisateurs admin
