@@ -1,4 +1,4 @@
-var k = [79, 66, 86, 49],
+var k = [79, 66, 86],
 n = 0;
 $(document).keydown(function (e) {
     if (e.keyCode === k[n++]) {
