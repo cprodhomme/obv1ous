@@ -19,6 +19,17 @@
  @import "font-awesome-sprockets";
  @import "font-awesome";
 
+/************************
+    U T I L I T A I R E
+**************************/
+.bold {
+    font-weight: bold;
+}
+
+/*********************
+     C O N T E N T
+**********************/
+
 body{
     background: #eceff1;
 }
@@ -83,4 +94,25 @@ header{
 }
 .waves-button-input:hover{
     background: #2bbbad;
+}
+
+/********************
+       A D M I N
+ ********************/
+.admin {
+    .logo {
+        border-bottom: 1px solid #DDD;
+        .brand-logo {
+            text-align: center;
+            
+            .admin-page-logo {
+                height: 64px;
+                
+            }
+        }
+    }
+
+    main {
+        padding-left: 240px;
+    }
 }

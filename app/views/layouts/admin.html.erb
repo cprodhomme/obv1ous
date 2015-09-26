@@ -7,7 +7,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="admin">
 	<header>
 		<nav class="top-nav">
 			<div class="container">
@@ -19,15 +19,28 @@
 
 		<ul id="nav-mobile" class="side-nav fixed" style="left: 0px;">
 			<li class="logo">
-				<a id="logo-container" href="http://materializecss.com/" class="brand-logo">
-	        		<object id="front-page-logo" type="image/svg+xml" data="res/materialize.svg">Your browser does not support SVG</object>
-	        	</a>
+				<%= link_to root_path, { :class => "brand-logo", :id=> "logo-container" } do %>
+					<img src="/assets/logo-trans.png" class="admin-page-logo" alt="logo Obv1ous">
+	        	<% end %>
 	        </li>
-			<li><a href="#">Articles</a></li>
-			<li><a href="#">Pages</a></li>
-			<li><a href="#">Utilisateurs</a></li>
-			<li><a href="#">Team</a></li>
-			<li><a href="#">Gallerie</a></li>
+	        <li class="bold">
+	        	<%= link_to 'Dashboard', admin_dashboard_index_path %>
+			</li>
+			<li class="bold">
+				<a href="#">Articles</a>
+			</li>
+			<li class="bold">
+				<a href="#">Pages</a>
+			</li>
+			<li class="bold">
+				<a href="#">Utilisateurs</a>
+			</li>
+			<li class="bold">
+				<a href="#">Team</a>
+			</li>
+			<li class="bold">
+				<a href="#">Gallerie</a>
+			</li>
 		</ul>
 	</header>
 	<main>

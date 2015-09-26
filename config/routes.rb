@@ -4,7 +4,10 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
+  root 'articles#index'
+
+  # show 1 article
+  #get '/:id' => 'articles#show'
 
   resources :news, only: [:index, :show]
   resources :team, only: [:index, :show]

@@ -1,0 +1,60 @@
+<div class="row">
+    <div class="col s12 m12 l8 ">
+        <div class="card hoverable">
+            <div class="card-image">
+              <img src="http://i.imgur.com/iWJWE.png">
+              <span class="card-title">Card Title</span>
+            </div>
+            <div class="card-content">
+              <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-action">
+              <a href="#" class="right light-blue-text text-darken-2">Lire la suite</a>
+              <div class="clear"></div>
+            </div>
+        </div>
+
+        <% @news.each do |new| %>
+            <div class="card hoverable">
+                <div class="card-image">
+                  <img src="http://www.orks.fr/wp-content/uploads/2014/05/banniere-csgo.jpg">
+                  <span class="card-title"><%= new.title %></span>
+                </div>
+                <div class="card-content">
+                  <p><%= new.summary %></p>
+                </div>
+                <div class="card-action ">
+                  <a href="#" class="right light-blue-text text-darken-2">Lire la suite</a>
+                  <div class="clear"></div>
+                </div>
+            </div>
+        <% end %>
+
+        <div class="card hoverable">
+            <div class="card-image">
+              <img src="http://www.orks.fr/wp-content/uploads/2014/05/banniere-csgo.jpg">
+              <span class="card-title">Card Title</span>
+            </div>
+            <div class="card-content">
+              <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-action ">
+              <a href="#" class="right light-blue-text text-darken-2">Lire la suite</a>
+              <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col s4 hide-on-med-and-down"><!-- pour cacher en mobile .hide-on-small-only -->
+        <div class="TwitchIndex">
+            <iframe src="http://www.twitch.tv/sweubi/embed" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <div class="scocialIndex">
+            <a TARGET = "_blank" href="https://twitter.com/Gaviil_"><img src="assets/twitter-gaviil.png" width='100%' alt="IMG for scocial" /></a>
+            <a TARGET = "_blank" href="https://twitter.com/Sweubi"><img src="assets/twitter-sweubi.png" width='100%' alt="IMG for scocial" /></a>
+            <a TARGET = "_blank" href="https://twitch.tv/sweubi"><img src="assets/twitch-sweubi.png" width='100%' alt="IMG for scocial" /></a>
+        </div>
+
+    </div>
+</div>
