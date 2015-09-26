@@ -1,6 +1,7 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
 
+
 var k = [79, 66, 86],
 n = 0;
 $(document).keydown(function (e) {
@@ -9,8 +10,14 @@ $(document).keydown(function (e) {
             $('.awpheader').animate({
                 left: "0",
             }, 3000, function() {
+                $(".logo_obv").css("background-image","url('/assets/logo-trans2.png')");
+            });
 
-              });
+            // $('.awpheader').animate({
+            //     left: "-200px",
+            // }, 3000, function() {
+            //   });
+
             n = 0;
             return false;
         }
