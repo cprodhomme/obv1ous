@@ -129,7 +129,7 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
  ********************/
 .admin {
     .logo {
-        border-bottom: 1px solid #DDD;
+        border-bottom: 1px solid #454343;
         .brand-logo {
             text-align: center;
 
@@ -143,4 +143,7 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
     main {
         padding-left: 240px;
     }
+}
+.collapsible{
+    border:none !important;
 }

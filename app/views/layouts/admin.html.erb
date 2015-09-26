@@ -17,29 +17,47 @@
 
 		<div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="mdi-navigation-menu"></i></a></div>
 
-		<ul id="nav-mobile" class="side-nav fixed" style="left: 0px;">
+		<ul id="nav-mobile" class="side-nav fixed collapsible" style="left: 0px;">
 			<li class="logo">
 				<%= link_to root_path, { :class => "brand-logo", :id=> "logo-container" } do %>
 					<img src="/assets/logo-trans.png" class="admin-page-logo" alt="logo Obv1ous">
 	        	<% end %>
 	        </li>
 	        <li class="bold">
-	        	<%= link_to 'Dashboard', admin_dashboard_index_path %>
+	        	<%= link_to 'Dashboard', admin_dashboard_index_path, :class => "collapsible-header" %>
 			</li>
 			<li class="bold">
-				<%= link_to 'Articles', admin_articles_path %>
+				<%= link_to 'Articles', admin_articles_path, :class => "collapsible-header" %>
 			</li>
 			<li class="bold">
-				<a href="#">Pages</a>
+				<a class="collapsible-header">Pages</a>
+                <div class="collapsible-body" style="display: none;">
+                    <ul>
+                      <li><a href="">Hello</a></li>
+                      <li><a href="">Je</a></li>
+                      <li><a href="">Suis</a></li>
+                      <li><a href="">Un</a></li>
+                      <li><a href="">Test</a></li>
+                    </ul>
+              </div>
 			</li>
 			<li class="bold">
-				<a href="#">Utilisateurs</a>
+				<a class="collapsible-header">Utilisateurs</a>
+                <div class="collapsible-body" style="display: none;">
+                    <ul>
+                      <li><a href="">Hello</a></li>
+                      <li><a href="">Je</a></li>
+                      <li><a href="">Suis</a></li>
+                      <li><a href="">Un</a></li>
+                      <li><a href="">Test</a></li>
+                    </ul>
+              </div>
 			</li>
 			<li class="bold">
-				<a href="#">Team</a>
+				<a href="#" class="collapsible-header">Team</a>
 			</li>
 			<li class="bold">
-				<a href="#">Gallerie</a>
+				<a href="#" class="collapsible-header">Gallerie</a>
 			</li>
 		</ul>
 	</header>

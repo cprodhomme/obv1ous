@@ -12,3 +12,7 @@
 **à faire au démarrage de la plateforme :**
 - [app/models/user.rb] - mettre le champ "admin" à false par défaut
 - Crée des utilisateurs admin
+
+**Bug actuel**
+
+- la nav admin ne marche plus apres avoir cliquer sur un lien

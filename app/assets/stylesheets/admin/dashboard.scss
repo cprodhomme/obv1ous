@@ -1,3 +1,21 @@
-// Place all the styles related to the admin/dashboard controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.side-nav{
+    background: #2a2a2a !important;
+}
+.side-nav li{
+    padding: 0px !important;
+}
+.side-nav.fixed a{
+    padding: 0px 30px !important;
+}
+.side-nav li:hover, .side-nav li.active{
+    background: #242424 !important;
+}
+.side-nav.fixed a{
+    color:#f4f4f4 !important;
+}
+.side-nav .collapsible-header{
+    line-height: 70px !important;
+}
+.collapsible-body ul li{
+    background:#3a3a3a;
+}
