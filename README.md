@@ -1,11 +1,11 @@
 # obv1ous
 
 **Contributeurs :**
-Cle61  - https://github.com/Cle61
-Gaviil - https://github.com/Gaviil
+- Cle61  - https://github.com/Cle61
+- Gaviil - https://github.com/Gaviil
 
 **Lien du site :**
-obv1ous.fr ?
+- http://obv1ous.fr ?
 
 **Screenshot :**
 
