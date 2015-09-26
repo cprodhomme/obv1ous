@@ -1,15 +1,15 @@
 # obv1ous
 
-Contributeurs :
+**Contributeurs :**
 Cle61  - https://github.com/Cle61
 Gaviil - https://github.com/Gaviil
 
-Lien du site :
+**Lien du site :**
 obv1ous.fr ?
 
-Screenshot :
+**Screenshot :**
 
 
-à faire au démarage de la plateforme :
+**à faire au démarage de la plateforme :**
 - [app/models/user.rb] - mettre le champ "admin" à false par défaut
 - Crée des utilisateurs admin
