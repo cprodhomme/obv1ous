@@ -38,7 +38,7 @@
                         </ul>
                         <ul class="right hide-on-med-and-down ">
                             <% if user_signed_in? %>
-                                <li><a href="#">Pseudo</a></li>
+                                <li><a href="#"><%= current_user.username.capitalize %></a></li>
                                 <li><%= link_to 'Déconnexion', destroy_user_session_path, :id => "logout", :method => :delete %><li>
                             <% else %>
                                 <li><%= link_to 'Connexion', new_user_session_path %></li>

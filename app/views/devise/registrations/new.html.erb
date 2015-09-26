@@ -5,8 +5,13 @@
   <%= devise_error_messages! %>
 
   <div class="field input-field">
+    <%= f.label :username %>
+    <%= f.text_field :username, autofocus: true, :class => "validate" %>
+  </div>
+
+  <div class="field input-field">
     <%= f.label :email %>
-    <%= f.email_field :email, autofocus: true, :class => "validate" %>
+    <%= f.email_field :email, :class => "validate" %>
   </div>
 
   <div class="field input-field">
