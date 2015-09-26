@@ -41,8 +41,18 @@ header{
         background-image:url("/assets/head.png");
         background-repeat: no-repeat;
         background-size: cover;
+        overflow: hidden;
+
+        .awpheader{
+            position: absolute;
+            top: 0px;
+            left: -200px;
+            height:180px;
+        }
 
         .logo_obv{
+            position: absolute;
+            left: 44%;
             background-image: url("/assets/logo-trans.png");
             width: 150px;
             height: 170px;
@@ -52,6 +62,7 @@ header{
             background-position: bottom;
             background-repeat: no-repeat;
             // background-color: red;
+            display: inline-block;
         }
     }
 }
@@ -104,10 +115,10 @@ header{
         border-bottom: 1px solid #DDD;
         .brand-logo {
             text-align: center;
-            
+
             .admin-page-logo {
                 height: 64px;
-                
+
             }
         }
     }
