@@ -53,10 +53,18 @@
 
     <div class="container content">
         <% if notice %>
-            <p class="alert alert-success"><%= notice %></p>
+            <script type="text/javascript">
+            $( document ).ready(function() {
+                Materialize.toast('<%= notice %>', 4000);
+            });
+            </script> 
         <% end %>
         <% if alert %>
-            <p class="alert alert-danger"><%= alert %></p>
+            <script type="text/javascript">
+            $( document ).ready(function() {
+                Materialize.toast('<%= alert %>', 4000);
+            });
+            </script> 
         <% end %>
 
         <%= yield %>
