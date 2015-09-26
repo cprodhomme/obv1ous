@@ -15,8 +15,9 @@ Rails.application.routes.draw do
 
   namespace :admin do
     get '/' => 'dashboard#index'
-    resources :dashboard
-    resources :articles
+    resources :dashboard, only: [:index]
+    resources :articles, except: [:show]
+    resources :users, except: [:show]
   end
 
   # Example of regular route:

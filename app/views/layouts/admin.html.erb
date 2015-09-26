@@ -27,7 +27,7 @@
 	        	<%= link_to 'Dashboard', admin_dashboard_index_path %>
 			</li>
 			<li class="bold">
-				<a href="#">Articles</a>
+				<%= link_to 'Articles', admin_articles_path %>
 			</li>
 			<li class="bold">
 				<a href="#">Pages</a>
@@ -45,11 +45,7 @@
 	</header>
 	<main>
 		<div class="container">
-				<div class="row">
-				<div class="col s12 m9 l10">
-					<%= yield %>
-				</div>
-			</div>
+			<%= yield %>
 		</div>
 	</main>
 </body>
