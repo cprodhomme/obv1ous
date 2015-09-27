@@ -22,30 +22,31 @@
     main {
         padding-left: 240px;
     }
+
+
+
+    .side-nav{
+        background: #2a2a2a !important;
+    }
+    .side-nav li{
+        padding: 0px !important;
+    }
+    .side-nav.fixed a{
+        padding: 0px 30px !important;
+    }
+    .side-nav li:hover, .side-nav li.active{
+        background: #242424 !important;
+    }
+    .side-nav.fixed a{
+        color:#f4f4f4 !important;
+    }
+    .side-nav .collapsible-header{
+        line-height: 70px !important;
+    }
+    .collapsible-body ul li{
+        background:#3a3a3a;
+    }
 }
 .collapsible{
     border:none !important;
-}
-
-
-.side-nav{
-    background: #2a2a2a !important;
-}
-.side-nav li{
-    padding: 0px !important;
-}
-.side-nav.fixed a{
-    padding: 0px 30px !important;
-}
-.side-nav li:hover, .side-nav li.active{
-    background: #242424 !important;
-}
-.side-nav.fixed a{
-    color:#f4f4f4 !important;
-}
-.side-nav .collapsible-header{
-    line-height: 70px !important;
-}
-.collapsible-body ul li{
-    background:#3a3a3a;
 }
