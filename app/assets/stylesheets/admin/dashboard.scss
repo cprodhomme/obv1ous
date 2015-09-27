@@ -1,3 +1,33 @@
+/********************
+       A D M I N
+ ********************/
+.admin {
+    background-color: #fff;
+
+    header {
+    	.logo {
+	        border-bottom: 1px solid #242424;
+	        .brand-logo {
+	            text-align: center;
+
+	            .admin-page-logo {
+	                height: 64px;
+
+	            }
+	        }
+	    }
+    }
+
+
+    main {
+        padding-left: 240px;
+    }
+}
+.collapsible{
+    border:none !important;
+}
+
+
 .side-nav{
     background: #2a2a2a !important;
 }
