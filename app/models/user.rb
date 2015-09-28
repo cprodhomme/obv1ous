@@ -11,6 +11,15 @@ class User < ActiveRecord::Base
 
 	validate :validate_username
 
+	has_one :profile
+
+	after_create :create_default_profile
+
+	def create_default_profile
+		p = self.build_profile
+		p.save(validate: false)
+	end
+
 	def validate_username
 	  if User.where(email: username).exists?
 	    errors.add(:username, :invalid)

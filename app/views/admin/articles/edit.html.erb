@@ -1,1 +1,36 @@
-edit.html.erb
+<div class="row">
+	<div class="col s12">
+		<%= form_for(@new, url: admin_articles_path(@new.id), html: { method: :put }, id: 'edit_new_{@new.id}') do |f| %>
+
+			<% @new.errors.full_messages.each do |msg| %>
+				<%= msg %>
+			<% end %>
+
+		  <div class="field">
+		    <%= f.label :title %><br />
+		    <%= f.text_field :title, class: 'form-control' , autofocus: true %>
+		  </div>
+
+		  <div class="field">
+		    <%= f.label :summary %><br />
+		    <%= f.text_area :summary, class: 'form-control'  %>
+		  </div>
+
+		  <div class="field">
+		    <%= f.label :content %><br />
+		    <%= f.text_area :content, class: 'form-control' %>
+		  </div>
+
+		  <div class="field">
+				<%= f.label :image %><br />
+				<%= f.file_field :image %><br>
+				<%= @new.inspect %>
+				
+			</div>
+
+		  <div class="actions">
+		    <%= f.submit "Sauvegarder" %>
+		  </div>
+		<% end %>
+	</div>
+</div>
