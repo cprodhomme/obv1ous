@@ -25,7 +25,7 @@
 				<div><%= f.label :image %></div>
 				<div class="file-field input-field">
 					<div class="btn">
-						<span>File</span>
+						<span>Image</span>
 						<%= f.file_field :image %>
 					</div>
 						<div class="file-path-wrapper">
@@ -36,7 +36,9 @@
 			</div>
 
 			<div class="btnlog actions">
-				<%= f.submit "Publier", :class => " btn" %>
+				<%= f.submit :class => " btn" do %>
+				Publier <i class='material-icons right'>send</i>"
+				<% end %>
 			</div>
 		<% end %>
 
