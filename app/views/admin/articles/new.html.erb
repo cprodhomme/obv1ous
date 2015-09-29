@@ -22,6 +22,15 @@
 			</div>
 
 			<div class="field input-field">
+
+			      <div class="btn btn-upload-news">
+			        <span>File</span>
+			        <input type="file">
+			      </div>
+			      <div class="file-path-wrapper">
+			        <input class="file-path" type="text">
+			      </div>
+
 				<div><%= f.label :image %></div>
 				<div><%= f.file_field :image %></div>
 				<%= image_tag(@new.image) if @new.image? %>
