@@ -22,10 +22,10 @@
 		  </div>
 
 		  <div class="field">
-				<%= f.label :image %><br />
-				<%= f.file_field :image %><br>
-				<%= @new.inspect %>
-				
+			<%= f.label :image %><br />
+			<%= f.file_field :image %><br>
+			<%= @new.inspect %>
+			<%= image_tag(@new.image) if @new.image? %>
 			</div>
 
 		  <div class="actions">

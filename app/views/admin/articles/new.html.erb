@@ -24,7 +24,7 @@
 			<div class="field">
 				<%= f.label :image %><br />
 				<%= f.file_field :image %><br>
-				<%= image_tag(@new.image(:image)) if @new.image? %>
+				<%= image_tag(@new.image) if @new.image? %>
 			</div>
 
 			<div class="actions">
