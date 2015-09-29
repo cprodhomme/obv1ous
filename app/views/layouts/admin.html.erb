@@ -11,7 +11,7 @@
 	<header>
 		<nav class="top-nav">
 			<div class="container">
-				<div class="nav-wrapper"><a class="page-title">Navbar</a></div>
+				<div class="nav-wrapper"><a class="page-title"><%= controller_name.capitalize %></a></div>
 			</div>
 		</nav>
 
@@ -24,25 +24,33 @@
 	        	<% end %>
 	        </li>
 	        <li class="bold">
-	        	<%= link_to 'Dashboard', admin_dashboard_index_path, :class => "collapsible-header" %>
+	        	<%= link_to 'Dashboard', admin_dashboard_index_path, :class => (controller_name == 'dashboard' ? "collapsible-header active" : "active")  %>
+
 			</li>
 			<li class="bold">
-				<%= link_to 'Articles', admin_articles_path, :class => "collapsible-header" %>
+				<a class="collapsible-header <%= 'active' if controller_name == 'articles' %>">Articles</a>
+				<div class="collapsible-body" style="display: none;">
+					<ul>
+						<li><%= link_to 'Tous les articles', admin_articles_path %></li>
+						<li><%= link_to 'Ajouter', new_admin_article_path %></li>
+						<li><a href="">Catégories</a></li>
+					</ul>
+				</div>
 			</li>
 			<li class="bold">
-				<a class="collapsible-header">Pages</a>
-                <div class="collapsible-body" style="display: none;">
-                    <ul>
-                      <li><a href="">Hello</a></li>
-                      <li><a href="">Je</a></li>
-                      <li><a href="">Suis</a></li>
-                      <li><a href="">Un</a></li>
-                      <li><a href="">Test</a></li>
-                    </ul>
-              </div>
+				<a class="collapsible-header <%= 'active' if controller_name == 'pages' %>">Pages</a>
+				<div class="collapsible-body" style="display: none;">
+					<ul>
+						<li><a href="">Hello</a></li>
+						<li><a href="">Je</a></li>
+						<li><a href="">Suis</a></li>
+						<li><a href="">Un</a></li>
+						<li><a href="">Test</a></li>
+					</ul>
+				</div>
 			</li>
 			<li class="bold">
-				<a class="collapsible-header">Utilisateurs</a>
+				<a class="collapsible-header <%= 'active' if controller_name == 'users' %>">Utilisateurs</a>
                 <div class="collapsible-body" style="display: none;">
                     <ul>
                       <li><a href="">Hello</a></li>

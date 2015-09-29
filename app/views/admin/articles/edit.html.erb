@@ -35,9 +35,11 @@
 				<%= image_tag(@new.image) if @new.image? %>
 			</div>
 
-		  <div class="actions btnlog">
-		    <%= f.submit "Editer", :class => " btn" %>
-		  </div>
+			<div class="actions btnlog">
+				<%= button_tag(type: 'submit', class: "btn") do %>
+					Editer <i class='material-icons right'>send</i>
+				<% end %>
+			</div>
 		<% end %>
 	</div>
 </div>
