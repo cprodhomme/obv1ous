@@ -6,30 +6,29 @@
 				<%= msg %>
 			<% end %>
 
-		  <div class="field">
-		    <%= f.label :title %><br />
-		    <%= f.text_field :title, class: 'form-control' , autofocus: true %>
+		  <div class="field input-field">
+		    <%= f.label :title, "Titre" %>
+		    <%= f.text_field :title, class: 'form-control' , autofocus: true, :class => "validate" %>
 		  </div>
 
-		  <div class="field">
-		    <%= f.label :summary %><br />
-		    <%= f.text_area :summary, class: 'form-control'  %>
+		  <div class="field input-field">
+		    <%= f.label :summary, "Résumé" %>
+		    <%= f.text_area :summary, class: 'form-control', :class => "validate materialize-textarea" %>
 		  </div>
 
-		  <div class="field">
-		    <%= f.label :content %><br />
-		    <%= f.text_area :content, class: 'form-control' %>
+		  <div class="field input-field">
+		    <%= f.label :content, "Contenu" %>
+		    <%= f.text_area :content, class: 'form-control', :class => "validate materialize-textarea" %>
 		  </div>
 
-		  <div class="field">
+		  <div class="field input-field">
 			<%= f.label :image %><br />
 			<%= f.file_field :image %><br>
-			<%= @new.inspect %>
 			<%= image_tag(@new.image) if @new.image? %>
 			</div>
 
-		  <div class="actions">
-		    <%= f.submit "Sauvegarder" %>
+		  <div class="actions btnlog">
+		    <%= f.submit "Editer", :class => " btn" %>
 		  </div>
 		<% end %>
 	</div>
