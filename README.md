@@ -15,4 +15,4 @@
 
 **Bug actuel**
 
-- la nav admin ne marche plus apres avoir cliquer sur un lien
+- les news marche mais n'affiche pas la bonne img
