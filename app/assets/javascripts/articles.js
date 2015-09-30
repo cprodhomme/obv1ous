@@ -1,29 +1,24 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
 
+$( document ).ready(function() {
+    var shoot = 0;
 
-var k = [79, 66, 86],
-n = 0;
-$(document).keydown(function (e) {
-    if (e.keyCode === k[n++]) {
-        if (n === k.length) {
+    $('.logo_obv').click(function(){
+
+        if (shoot < 8) {
+            shoot = shoot +1;
+
             $('.awpheader').animate({
                 left: "0",
-            }, 3000, function() {
-                $(".logo_obv").css("background-image","url('/assets/logo-trans2.png')");
-            });
+            }, 1500, function() {
+                $(".logo-img").attr("src","assets/logo-shoot-"+shoot+".png");
+            }).delay( 400 );
 
-            // $('.awpheader').animate({
-            //     left: "-200px",
-            // }, 3000, function() {
-            //   });
-
-            n = 0;
-            return false;
+            $('.awpheader').animate({
+                left: "-200px",
+            },1500);
         }
-    }
-    else {
-        n = 0;
-    }
 
+    });
 });

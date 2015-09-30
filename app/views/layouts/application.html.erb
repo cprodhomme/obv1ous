@@ -12,7 +12,7 @@
         <div class="header-background" id="port">
             <img class="awpheader" src="assets/awpheader.png" alt="awp" />
             <div class="logo_obv">
-
+                <img class='logo-img logo' src="/assets/logo-trans.png" alt="" />
             </div>
         </div>
 
@@ -62,14 +62,14 @@
             $( document ).ready(function() {
                 Materialize.toast('<%= notice %>', 4000);
             });
-            </script> 
+            </script>
         <% end %>
         <% if alert %>
             <script type="text/javascript">
             $( document ).ready(function() {
                 Materialize.toast('<%= alert %>', 4000);
             });
-            </script> 
+            </script>
         <% end %>
 
         <%= yield %>

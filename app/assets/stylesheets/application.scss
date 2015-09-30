@@ -55,7 +55,6 @@ header{
         .logo_obv{
             position: absolute;
             left: 44%;
-            background-image: url("/assets/logo-trans.png");
             width: 150px;
             height: 170px;
             margin: auto;
@@ -63,7 +62,6 @@ header{
             background-size: contain;
             background-position: bottom;
             background-repeat: no-repeat;
-            // background-color: red;
             display: inline-block;
         }
     }
