@@ -3,31 +3,27 @@
 		<table class="striped">
 			<thead>
 				<tr>
-					<th data-field="id">Name</th>
-					<th data-field="name">Item Name</th>
-					<th data-field="price">Item Price</th>
+					<th data-field="id">Id</th>
+					<th data-field="name">Titre</th>
+					<th  class="right" data-field="price">Action</th>
 				</tr>
 			</thead>
-
 			<tbody>
-				<tr>
-					<td>Alvin</td>
-					<td>Eclair</td>
-					<td>
-						<a class="waves-effect waves-light btn"><i class="material-icons small">mode_edit</i></a>
-						<a class="waves-effect waves-light btn"><i class="material-icons small">delete</i></a>
-					</td>
-				</tr>
-				<tr>
-					<td>Alan</td>
-					<td>Jellybean</td>
-					<td>$3.76</td>
-				</tr>
-				<tr>
-					<td>Jonathan</td>
-					<td>Lollipop</td>
-					<td>$7.00</td>
-				</tr>
+				<% @news.each do |new| %>
+					<tr>
+						<td><%= new.id %></td>
+						<td><%= new.title %></td>
+						<td class="right">
+							<%= link_to edit_admin_article_path(id: new.id), { :class => "waves-effect waves-light btn"} do %>
+								<i class="material-icons small">mode_edit</i>
+				        	<% end %>
+
+							<%= link_to admin_article_path(new.id), { :class => "waves-effect waves-light btn"}, :method => :delete, :confirm => "Tu est sur ???  ☜(ﾟヮﾟ☜)" do %>
+								<i class="material-icons small">delete</i>
+				        	<% end %>
+						</td>
+					</tr>
+				<% end %>
 			</tbody>
 		</table>
 	</div>

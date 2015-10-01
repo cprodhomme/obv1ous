@@ -32,7 +32,9 @@
 						<input class="file-path validate" type="text">
 					</div>
 			    </div>
-				<%= image_tag(@new.image) if @new.image? %>
+				<div class="img-news">
+					<%= image_tag(@new.image) if @new.image? %>
+				</div>
 			</div>
 
 			<div class="btnlog actions">

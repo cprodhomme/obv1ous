@@ -10,7 +10,7 @@ class Admin::ArticlesController < Admin::DashboardController
 
 	def create
 	    @new = News.new(new_params)
- 
+
 		if @new.save
 			redirect_to edit_admin_article_path(@new.id), notice: 'Votre article a bien été creer'
 		else
@@ -18,7 +18,7 @@ class Admin::ArticlesController < Admin::DashboardController
 		end
 	end
 
-	def edit 
+	def edit
 		@new = News.find(params[:id])
 	end
 
@@ -31,6 +31,11 @@ class Admin::ArticlesController < Admin::DashboardController
 	    else
 	      render 'edit'
 	    end
+	end
+
+	def destroy
+		News.destroy(params[:id])
+		redirect_to admin_articles_path, notice: 'Votre article a bien ete supprimer'
 	end
 
 	private
