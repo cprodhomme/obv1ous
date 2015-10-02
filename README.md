@@ -16,3 +16,6 @@
 **Bug actuel**
 
 - les news marche mais n'affiche pas la bonne img
+
+**API KEY :**
+400CE5B4A6702A1A9EFD2822BC461A9D
