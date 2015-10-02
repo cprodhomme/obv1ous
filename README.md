@@ -17,7 +17,7 @@
 
 - les news marche mais n'affiche pas la bonne img
 
-** Besoin **
+**Besoin :**
 
 Besoin d'un champ ID dans la bdd user pour lier avec steam
 
