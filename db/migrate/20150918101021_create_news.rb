@@ -4,7 +4,7 @@ class CreateNews < ActiveRecord::Migration
       t.string :title
       t.text :summary
       t.text :content
-      t.string :image, default: "news4.png"
+      t.string :image
 
       t.timestamps
     end

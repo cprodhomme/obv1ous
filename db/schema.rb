@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20151004001934) do
     t.string   "title",      limit: 255
     t.text     "summary",    limit: 65535
     t.text     "content",    limit: 65535
-    t.string   "image",      limit: 255,   default: "news4.png"
+    t.string   "image",      limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end

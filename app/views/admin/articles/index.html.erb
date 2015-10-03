@@ -18,7 +18,7 @@
 								<i class="material-icons small">mode_edit</i>
 				        	<% end %>
 
-							<%= link_to admin_article_path(new.id), { :class => "waves-effect waves-light btn"}, :method => :delete, :confirm => "Tu est sur ???  ☜(ﾟヮﾟ☜)" do %>
+							<%= link_to admin_article_path(new.id), :class => "waves-effect waves-light btn red darken-3", :method => :delete,  :data => {:confirm => 'Tu est sur ???  ☜(ﾟヮﾟ☜)' } do %>
 								<i class="material-icons small">delete</i>
 				        	<% end %>
 						</td>
