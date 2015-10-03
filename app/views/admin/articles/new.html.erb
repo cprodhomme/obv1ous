@@ -11,14 +11,14 @@
 				<%= f.text_field :title, length: {minimum: 10}, autofocus: true, :class => "validate" %>
 			</div>
 
-			<div class="field input-field">
+			<div class="field">
 				<%= f.label :summary, "Résumé" %>
-				<%= f.text_area :summary,length: {minimum: 10}, :class => "validate materialize-textarea"  %>
+				<%= f.cktext_area :summary,length: {minimum: 10}, :class => ""  %>
 			</div>
 
-			<div class="field input-field">
+			<div class="field">
 				<%= f.label :content, "Contenu" %>
-				<%= f.text_area :content, length: {minimum: 10}, :class => "validate materialize-textarea"  %>
+				<%= f.cktext_area :content, length: {minimum: 10}, :class => ""  %>
 			</div>
 
 			<div class="field input-field">
