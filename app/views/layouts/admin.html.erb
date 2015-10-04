@@ -52,10 +52,16 @@
                     	<li><%= link_to 'Tous les utilisateurs', admin_users_path %></li>
 						<li><%= link_to 'Ajouter', new_admin_user_path %></li>
                     </ul>
-              </div>
+              	</div>
 			</li>
 			<li class="bold">
-				<a href="#" class="collapsible-header">Team</a>
+				<a class="collapsible-header <%= 'active' if controller_name == 'team_members' %>">Team</a>
+                <div class="collapsible-body" style="display: none;">
+                    <ul>
+                    	<li><%= link_to 'Tous les membres', admin_team_members_path %></li>
+						<li><%= link_to 'Ajouter', new_admin_team_member_path %></li>
+                    </ul>
+              	</div>
 			</li>
 			<li class="bold">
 				<a href="#" class="collapsible-header">Gallerie</a>
