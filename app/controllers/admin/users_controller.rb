@@ -1,15 +1,15 @@
 class Admin::UsersController < Admin::DashboardController
 
     def index
-		@users = Users.order('id desc')
+		@users = User.order('id desc')
 	end
 
 	def new
-		@user = Users.new
+		@user = User.new
 	end
 
 	def create
-	    @user = Users.new(new_params)
+	    @user = User.new(new_params)
 
 		if @user.save
 			redirect_to edit_admin_article_path(@user.id), notice: 'Votre article a bien été creer'
@@ -19,11 +19,11 @@ class Admin::UsersController < Admin::DashboardController
 	end
 
 	def edit
-		@user = Users.find(params[:id])
+		@user = User.find(params[:id])
 	end
 
 	def update
-		@user = Users.find(params[:id])
+		@user = User.find(params[:id])
 
 	    if @user.update_attributes(new_params)
 	      # Handle a successful update.
@@ -34,13 +34,13 @@ class Admin::UsersController < Admin::DashboardController
 	end
 
 	def destroy
-		News.destroy(params[:id])
+		User.destroy(params[:id])
 		redirect_to admin_articles_path, notice: 'Utilisateur a bien ete supprimer'
 	end
 
 	private
 
-    def new_params
-      params.require(:news).permit(:title, :summary, :content, :image)
+    def user_params
+      params.require(:users).permit(:title, :summary, :content, :image)
     end
 end

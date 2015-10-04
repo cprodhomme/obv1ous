@@ -24,7 +24,7 @@
 	        	<% end %>
 	        </li>
 	        <li class="bold">
-	        	<%= link_to 'Dashboard', admin_dashboard_index_path, :class => (controller_name == 'dashboard' ? "collapsible-header active" : "active")  %>
+	        	<%= link_to 'Dashboard', admin_dashboard_index_path, :class => (controller_name == 'dashboard' ? "collapsible-header active" : "collapsible-header")  %>
 
 			</li>
 			<li class="bold">
@@ -49,8 +49,8 @@
 				<a class="collapsible-header <%= 'active' if controller_name == 'users' %>">Utilisateurs</a>
                 <div class="collapsible-body" style="display: none;">
                     <ul>
-                      <li><a href="">Tous les utilisateurs</a></li>
-                      <li><a href="">Ajouter</a></li>
+                    	<li><%= link_to 'Tous les utilisateurs', admin_users_path %></li>
+						<li><%= link_to 'Ajouter', new_admin_user_path %></li>
                     </ul>
               </div>
 			</li>
