@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     resources :dashboard, only: [:index]
     resources :articles, except: [:show]
     resources :users, except: [:show]
+    resources :team_members, except: [:show]
   end
 
   # Example of regular route:

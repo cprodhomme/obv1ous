@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20151004001934) do
   create_table "profiles", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
     t.string   "id_steam",   limit: 255
+    t.string   "team",       limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end

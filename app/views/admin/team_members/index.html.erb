@@ -1,0 +1,32 @@
+<div class="row">
+	<div class="col s12">
+		<table class="striped">
+			<thead>
+				<tr>
+					<th data-field="id">Id</th>
+					<th data-field="name">Nom</th>
+					<th data-field="name">ID Steam</th>
+					<th  class="right" data-field="price">Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @members.each do |member| %>
+					<tr>
+						<td><%= member.id %></td>
+						<td><%= member.name %></td>
+						<td><%= member.id_steam %></td>
+						<td class="right">
+							<%= link_to edit_admin_team_member_path(id: member.id), { :class => "waves-effect waves-light btn"} do %>
+								<i class="material-icons small">mode_edit</i>
+				        	<% end %>
+
+							<%= link_to admin_team_member_path(member.id), :class => "waves-effect waves-light btn red darken-3", :method => :delete,  :data => {:confirm => 'Tu est sur ???  ☜(ﾟヮﾟ☜)' } do %>
+								<i class="material-icons small">delete</i>
+				        	<% end %>
+						</td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>
