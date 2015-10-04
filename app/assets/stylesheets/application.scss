@@ -128,3 +128,19 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
     border-bottom:1px solid #0288d1;
     box-shadow:0 1px 0 0 #0288d1;
 }
+.news{
+
+    .img_news{
+
+        margin-top: 10px;
+        img{
+            width:100%;
+            min-height: 50px;
+            background-color: red;
+        }
+
+    }
+    .content-news{
+
+    }
+}
