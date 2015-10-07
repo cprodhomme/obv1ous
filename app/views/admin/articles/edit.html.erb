@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="col s12">
-		<%= form_for(@new, url: admin_articles_path(@new.id), html: { method: :put }, id: 'edit_new_{@new.id}') do |f| %>
+		<%= form_for(@new, url: admin_article_path(@new.id), html: { method: :put }, id: 'edit_new_{@new.id}') do |f| %>
 
 			<% @new.errors.full_messages.each do |msg| %>
 				<%= msg %>
