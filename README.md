@@ -13,14 +13,6 @@
 - [app/models/user.rb] - mettre le champ "admin" à false par défaut
 - Crée des utilisateurs admin
 
-**Bug actuel**
-
-- les news marche mais n'affiche pas la bonne img
-
-**Besoin :**
-
-Besoin d'un champ ID dans la bdd user pour lier avec steam
-
 **API KEY :**
 
 400CE5B4A6702A1A9EFD2822BC461A9D
