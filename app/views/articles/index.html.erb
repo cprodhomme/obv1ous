@@ -9,13 +9,13 @@
                     <%= image_tag("news4.png") %>
                     gg
                   <% end %>
-                  <span class="card-title"><%= new.title %></span>
+                  <span class="card-title"><%= link_to new.title, article_path(new.id) %></span>
                 </div>
                 <div class="card-content">
                   <p><%= new.summary.html_safe %></p>
                 </div>
                 <div class="card-action ">
-                  <a href="#" class="right light-blue-text text-darken-2">Lire la suite</a>
+                  <%= link_to 'Lire la suite', article_path(new.id), :class => 'right light-blue-text text-darken-2' %>
                   <div class="clear"></div>
                 </div>
             </div>
