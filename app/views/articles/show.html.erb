@@ -1,20 +1,17 @@
 <div class="row">
     <div class="col s12 m12 l8 news">
         <div class="img_news">
-            <img src="http://media.steampowered.com/apps/csgo/blog/images/vanguard_bg.jpg?v=1002" alt="" />
+            <%= image_tag(new.image) %>
         </div>
         <div class="content-news">
             <h4 class='titre col s12'>
-                titre
+                <%= new.title %>
             </h4>
             <span class="content-news col s12">
-                treo treo treo treo treo treo treo treo treo treo treo treo treo treo treo treo treo treo treo treo treo treo treo treo treo treo treo treo treo treo treo treo treo treo treo treo treo treo
+                <%= new.content.html_safe %>
             </span>
-
         </div>
-
     </div>
-
 
     <div class="col s4 hide-on-med-and-down"><!-- pour cacher en mobile .hide-on-small-only -->
         <div class="TwitchIndex">
