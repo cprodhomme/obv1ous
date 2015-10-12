@@ -64,7 +64,13 @@
               	</div>
 			</li>
 			<li class="bold">
-				<a href="#" class="collapsible-header">Gallerie</a>
+				<a class="collapsible-header <%= 'active' if controller_name == 'gallery' %>">Galerie</a>
+                <div class="collapsible-body" style="display: none;">
+                    <ul>
+                    	<li><%= link_to 'Toutes les images', admin_team_members_path %></li>
+						<li><%= link_to 'Ajouter', new_admin_team_member_path %></li>
+                    </ul>
+              	</div>
 			</li>
 		</ul>
 	</header>
