@@ -79,7 +79,7 @@ header{
      C O N T E N T
 **********************/
 .content{
-    background: #fff;
+    // background: #fff;
 
     .TwitchIndex{
         text-align: center;
@@ -141,6 +141,7 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
 
     }
     .content-news{
-
+        background-color: #fff;
+        min-height: 80px;
     }
 }

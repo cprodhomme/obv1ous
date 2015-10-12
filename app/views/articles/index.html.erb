@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col s12 m12 l8 ">
         <% @news.each do |new| %>
-            <div class="card hoverable">
+            <div class="card">
                 <div class="card-image">
                   <% if new.image %>
                     <%= image_tag(new.image) %>
