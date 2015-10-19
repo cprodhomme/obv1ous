@@ -21,6 +21,7 @@ Rails.application.routes.draw do
     resources :articles, except: [:show]
     resources :users, except: [:show]
     resources :team_members, except: [:show]
+    resources :gallery, except: [:show]
   end
 
   # Example of regular route:
