@@ -53,8 +53,6 @@ header{
         }
 
         .logo_obv{
-            position: absolute;
-            left: 44%;
             width: 150px;
             height: 170px;
             margin: auto;
@@ -62,7 +60,6 @@ header{
             background-size: contain;
             background-position: bottom;
             background-repeat: no-repeat;
-            display: inline-block;
         }
     }
 }
@@ -91,6 +88,13 @@ header{
     }
     .card{
         margin:10px 0;
+
+        .card-action{
+
+            a{
+                color: #757575;
+            }
+        }
     }
     .btnlog{
         margin: 10px;
@@ -178,4 +182,16 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
         }
     }
 
+}
+.showPlayer{
+    margin: 20px;
+    img{
+        width: 150px;
+        border: 5px solid #fff;
+    }
+    span{
+        font-size: 20px;
+        font-weight: bold;
+        color: #242424;
+    }
 }
