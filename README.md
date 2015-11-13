@@ -9,6 +9,16 @@
 
 **Screenshot :**
 
+
+Accueil
+
+![alt tag](http://quentinboussard.fr/img/folio/full/Obv-1.png)
+
+
+Back-Office
+
+![alt tag](http://quentinboussard.fr/img/folio/full/Obv-2.png)
+
 <!-- **à faire au démarrage de la plateforme :**
 - [app/models/user.rb] - mettre le champ "admin" à false par défaut
 - Crée des utilisateurs admin
