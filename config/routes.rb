@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources :articles, only: [:index, :show]
   resources :team, only: [:index, :show]
   resources :gallery, only: [:index]
+  resources :roulette, only: [:index]
 
   namespace :admin do
     get '/' => 'dashboard#index'

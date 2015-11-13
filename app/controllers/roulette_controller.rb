@@ -1,0 +1,2 @@
+class RouletteController < ApplicationController
+end

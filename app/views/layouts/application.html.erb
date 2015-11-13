@@ -26,6 +26,7 @@
                             <li><%= link_to 'Accueil', root_path %></li>
                             <li><%= link_to 'Team', team_index_path %></li>
                             <li><%= link_to 'Galerie', gallery_index_path %></li>
+                            <li><%= link_to 'Roulette', roulette_index_path %></li>
                             <li class="divider"></li>
                             <% if user_signed_in? %>
                                 <li><a href="#"><%= current_user.username.capitalize %></a></li>
@@ -39,6 +40,7 @@
                             <li><%= link_to 'Accueil', root_path %><li>
                             <li><%= link_to 'Team', team_index_path %></li>
                             <li><%= link_to 'Galerie', gallery_index_path %></li>
+                            <li><%= link_to 'Roulette', roulette_index_path %></li>
                         </ul>
                         <ul class="right hide-on-med-and-down ">
                             <% if user_signed_in? %>

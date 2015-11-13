@@ -195,3 +195,24 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
         color: #242424;
     }
 }
+.roulette{
+    text-align: center;
+
+    .T{
+        background-color:#ffab40;
+    }
+    .CT{
+        background-color: #01579b;
+    }
+    .btn{
+        padding-left:30px;
+        padding-right: 30px;
+    }
+    .content-strat{
+        margin-top: 40px;
+        text-align: left;
+    }
+    blockquote{
+        // border-left:#01579b;
+    }
+}
