@@ -214,5 +214,10 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
     }
     blockquote{
         // border-left:#01579b;
+        padding: 10px;
+        background-color:#f5f5f5;
+    }
+    .content-roulette{
+        min-height:150px; 
     }
 }

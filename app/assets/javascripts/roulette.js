@@ -18,6 +18,7 @@ $( document ).ready(function() {
     $(".T, .CT").click(function(){
         var n = Math.floor((Math.random() * stratsCT.length));
 
+        $("blockquote").show();
         // Math.floor((Math.random() * 100) + 1);
 
         if($(this).hasClass("CT")){
