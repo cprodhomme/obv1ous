@@ -1,0 +1,28 @@
+<div class="row">
+	<div class="col s12">
+		<%= form_for(@roulette, url: admin_roulette_path(@roulette.id), html: { method: :put }, id: 'edit_new_{@roulette.id}') do |f| %>
+
+			<% @roulette.errors.full_messages.each do |msg| %>
+				<%= msg %>
+			<% end %>
+
+			<div class="field input-field">
+				<%= f.label :team, "Team" %>
+				<%= select_tag(:team, '<option value="" disabled selected>Choose your option</option>
+      <option value="CT">CT</option>
+      <option value="T">T</option>') %>
+			</div>
+
+			<div class="field input-field">
+				<%= f.label :strat, "Strat" %>
+				<%= f.text_area :strat, length: {minimum: 10}, :class => ""  %>
+			</div>
+
+			<div class="actions btnlog">
+				<%= button_tag(type: 'submit', class: "btn") do %>
+					Editer <i class='material-icons right'>send</i>
+				<% end %>
+			</div>
+		<% end %>
+	</div>
+</div>

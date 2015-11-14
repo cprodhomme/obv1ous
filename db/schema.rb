@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151004001934) do
+ActiveRecord::Schema.define(version: 20151114155956) do
 
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string   "data_file_name",    limit: 255, null: false
@@ -47,6 +47,13 @@ ActiveRecord::Schema.define(version: 20151004001934) do
   end
 
   add_index "profiles", ["user_id"], name: "index_profiles_on_user_id", using: :btree
+
+  create_table "roulettes", force: :cascade do |t|
+    t.string   "team",       limit: 255
+    t.text     "strat",      limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
 
   create_table "team_members", force: :cascade do |t|
     t.string   "name",       limit: 255

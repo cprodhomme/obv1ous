@@ -1,0 +1,32 @@
+<div class="row">
+	<div class="col s12">
+		<table class="striped">
+			<thead>
+				<tr>
+					<th data-field="id">Id</th>
+					<th data-field="name">Team</th>
+					<th data-field="strat">Strat</th>
+					<th  class="right" data-field="price">Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @roulettes.each do |roulette| %>
+					<tr>
+						<td><%= roulette.id %></td>
+						<td><%= roulette.team %></td>
+						<td><%= roulette.strat %></td>
+						<td class="right">
+							<%= link_to edit_admin_roulette_path(id: roulette.id), { :class => "waves-effect waves-light btn"} do %>
+								<i class="material-icons small">mode_edit</i>
+				        	<% end %>
+
+							<%= link_to admin_roulette_path(roulette.id), :class => "waves-effect waves-light btn red darken-3", :method => :delete,  :data => {:confirm => 'Tu est sur ???  ☜(ﾟヮﾟ☜)' } do %>
+								<i class="material-icons small">delete</i>
+				        	<% end %>
+						</td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>

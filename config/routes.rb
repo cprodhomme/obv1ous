@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   mount Ckeditor::Engine => '/ckeditor'
 
   devise_for :users
@@ -23,6 +24,7 @@ Rails.application.routes.draw do
     resources :users, except: [:show]
     resources :team_members, except: [:show]
     resources :gallery, except: [:show]
+    resources :roulette, except: [:show]
   end
 
   # Example of regular route:

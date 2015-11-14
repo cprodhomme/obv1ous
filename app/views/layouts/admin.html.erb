@@ -72,6 +72,15 @@
                     </ul>
               	</div>
 			</li>
+			<li class="bold">
+				<a class="collapsible-header <%= 'active' if controller_name == 'roulette' %>">Roulette</a>
+                <div class="collapsible-body" style="display: none;">
+                    <ul>
+                    	<li><%= link_to 'Toutes les roulettes', admin_roulette_index_path %></li>
+						<li><%= link_to 'Ajouter', new_admin_roulette_path %></li>
+                    </ul>
+              	</div>
+			</li>
 		</ul>
 	</header>
 	<main>
