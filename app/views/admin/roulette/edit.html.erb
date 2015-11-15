@@ -6,16 +6,17 @@
 				<%= msg %>
 			<% end %>
 
-			<div class="field input-field">
-				<%= f.label :team, "Team" %>
-				<%= select_tag(:team, '<option value="" disabled selected>Choose your option</option>
-      <option value="CT">CT</option>
-      <option value="T">T</option>') %>
+			<div class="field input-field col s12">
+				<%= f.select(:team) do %>
+					<% [['CT', 'CT'], ['T', 'T']].each do |c| -%>
+						<%= content_tag(:option, c.first, value: c.last) %>
+					<% end %>
+				<% end %>
 			</div>
 
-			<div class="field input-field">
+			<div class="field input-field col s12">
 				<%= f.label :strat, "Strat" %>
-				<%= f.text_area :strat, length: {minimum: 10}, :class => ""  %>
+				<%= f.text_area :strat, length: {minimum: 10}, :class => "materialize-textarea"  %>
 			</div>
 
 			<div class="actions btnlog">
@@ -26,3 +27,8 @@
 		<% end %>
 	</div>
 </div>
+<script>
+$(document).ready(function() {
+    $('select').material_select();
+  });
+</script>
