@@ -185,15 +185,20 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
 }
 .showPlayer{
     margin: 20px;
-    img{
-        width: 150px;
-        border: 5px solid #fff;
-    }
     span{
         font-size: 20px;
         font-weight: bold;
         color: #242424;
     }
+    .tabs{
+        background: none;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .infojoueur{
+        min-height:100px;
+    }
+
 }
 .roulette{
     text-align: center;

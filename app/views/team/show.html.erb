@@ -1,27 +1,33 @@
 <div class="row">
     <div class="col s12 m12 l12">
             <div class="showPlayer">
-                <img src="/assets/logo-trans-259a02ab86f263dfbb4afe0771098a4809281bf7233c016745c39b5ba46b0235.png" class="circle" alt="" />
                 <span>Pseudo</span>
 
-                <table>
-                    <tr>
-                        <td>
-                            Grade Actuel
-                        </td>
-                        <td>
-                            test
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Grade le plus haut
-                        </td>
-                        <td>
-                            test
-                        </td>
-                    </tr>
-                </table>
+                <div class="row">
+                <div class="col s12">
+                  <ul class="tabs">
+                    <li class="tab col s3"><a href="#showPlayer1">Jeux</a></li>
+                    <li class="tab col s3"><a href="#showPlayer2">Infos</a></li>
+                    <li class="tab col s3 disabled"><a href="#showPlayer3">API Stats</a></li>
+                  </ul>
+                </div>
+                <div id="showPlayer1" class="col s12 infojoueur">
+                    <div class="games">
+                        <%= image_tag('games/lol.png') %>
+                        <%= image_tag('games/csgo.png') %>
+                        <%= image_tag('games/rocket.png') %>
+                        <%= image_tag('games/block.png') %>
+                    </div>
+                </div>
+                <div id="showPlayer2" class="col s12 infojoueur"></div>
+                <div id="showPlayer3" class="col s12 infojoueur">disabled</div>
+              </div>
             </div>
     </div>
 </div>
+
+<script>
+$(document).ready(function(){
+    $('ul.tabs').tabs();
+  });
+</script>
