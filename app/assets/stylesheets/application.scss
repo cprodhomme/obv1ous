@@ -198,7 +198,14 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
     .infojoueur{
         min-height:100px;
     }
-
+    .games{
+        .col{
+            padding: 0;
+        }
+        img{
+            width: 100%;
+        }
+    }
 }
 .roulette{
     text-align: center;
