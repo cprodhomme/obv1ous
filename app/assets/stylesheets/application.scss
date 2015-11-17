@@ -203,6 +203,16 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
             width: 100%;
         }
     }
+    .descri{
+        font-size: 13px;
+    }
+    table{
+        margin-top: 30px;
+
+        img{
+            width:100%;
+        }
+    }
 }
 .roulette{
     text-align: center;
