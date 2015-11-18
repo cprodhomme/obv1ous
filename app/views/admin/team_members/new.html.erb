@@ -12,28 +12,51 @@
 				<div class="col s12 m6">
 					<div class="field input-field">
 						<%= f.label :name, "Nom" %>
-						<%= f.text_field :name, autofocus: true, :class => "validate" %>
+						<%= f.text_field :name, autofocus: true, :class => "" %>
 					</div>
 
 					<div class="field input-field">
 						<%= f.label :id_steam, "ID Steam" %>
-						<%= f.text_field :id_steam, :class => "validate" %>
+						<%= f.text_field :id_steam, :class => "" %>
 					</div>
 
-					<div class="field input-field">
+
+					<div class="field input-field radio-color">
+						<p>Couleur IG</p>
 						<%= f.radio_button :color, 'blue', :name => 'group1', :id => 'radio_blue' %>
+						<label for="radio_blue" id="blue"></label>
 						<%= f.radio_button :color, 'green', :name => 'group1', :id => 'radio_green' %>
-						<%= f.radio_button :color, 'orange', :name => 'group1' %>
-						<%= f.radio_button :color, 'yellow', :name => 'group1' %>
-						<%= f.radio_button :color, 'purple', :name => 'group1' %>
+						<label for="radio_green" id="green"></label>
+						<%= f.radio_button :color, 'orange', :name => 'group1', :id => 'radio_orange' %>
+						<label for="radio_orange" id="orange"></label>
+						<%= f.radio_button :color, 'yellow', :name => 'group1', :id => 'radio_yellow' %>
+						<label for="radio_yellow" id="yellow"></label>
+						<%= f.radio_button :color, 'purple', :name => 'group1', :id => 'radio_purple' %>
+						<label for="radio_purple" id="purple"></label>
 					</div>
 
-					<div class="field input-field">
-						<%= f.radio_button :avatar_color, 'blue', :name => 'group2', :id => 'radio_blue' %>
-						<%= f.radio_button :avatar_color, 'green', :name => 'group2', :id => 'radio_green' %>
-						<%= f.radio_button :avatar_color, 'orange', :name => 'group2' %>
-						<%= f.radio_button :avatar_color, 'yellow', :name => 'group2' %>
-						<%= f.radio_button :avatar_color, 'purple', :name => 'group2' %>
+					<div class="field input-field radio-color">
+						<p>Couleur Icone</p>
+						<%= f.radio_button :avatar_color, 'blue', :name => 'group2', :id => 'radio_blue2' %>
+						<label for="radio_blue2" id="blue2"></label>
+						<%= f.radio_button :avatar_color, 'green', :name => 'group2', :id => 'radio_green2' %>
+						<label for="radio_green2" id="green2"></label>
+						<%= f.radio_button :avatar_color, 'orange', :name => 'group2', :id => 'radio_orange2'%>
+						<label for="radio_orange2" id="orange2"></label>
+						<%= f.radio_button :avatar_color, 'yellow', :name => 'group2', :id => 'radio_yellow2'%>
+						<label for="radio_yellow2" id="yellow2"></label>
+						<%= f.radio_button :avatar_color, 'purple', :name => 'group2', :id => 'radio_purple2'%>
+						<label for="radio_purple2" id="purple2"></label>
+						<%= f.radio_button :avatar_color, 'jade', :name => 'group2', :id => 'radio_jade2'%>
+						<label for="radio_jade2" id="jade2"></label>
+						<%= f.radio_button :avatar_color, 'red', :name => 'group2', :id => 'radio_red2'%>
+						<label for="radio_red2" id="red2"></label>
+						<%= f.radio_button :avatar_color, 'grey', :name => 'group2', :id => 'radio_grey2'%>
+						<label for="radio_grey2" id="grey2"></label>
+						<%= f.radio_button :avatar_color, 'pink', :name => 'group2', :id => 'radio_pink2'%>
+						<label for="radio_pink2" id="pink2"></label>
+						<%= f.radio_button :avatar_color, 'brown', :name => 'group2', :id => 'radio_brown2'%>
+						<label for="radio_brown2" id="brown2"></label>
 					</div>
 				</div>
 
@@ -46,7 +69,7 @@
 								<%= f.file_field :avatar %>
 							</div>
 								<div class="file-path-wrapper">
-								<input class="file-path validate" type="text">
+								<input class="file-path " type="text">
 							</div>
 					    </div>
 						<div class="img-news">
@@ -70,12 +93,12 @@
 					<p>Grade :</p>
 					<div class="field input-field">
 						<%= f.label :rank_cs, "Counter Strike" %>
-						<%= f.text_field :rank_cs, :class => "validate" %>
+						<%= f.text_field :rank_cs, :class => "" %>
 					</div>
 
 					<div class="field input-field">
 						<%= f.label :rank_lol, "League Of Legends" %>
-						<%= f.text_field :rank_lol, :class => "validate" %>
+						<%= f.text_field :rank_lol, :class => "" %>
 					</div>
 				</div>
 
@@ -83,16 +106,82 @@
 					<p>Rôles :</p>
 					<div class="field input-field">
 						<%= f.label :role_cs, "Counter Strike" %>
-						<%= f.text_field :role_cs, :class => "validate" %>
+						<%= f.text_field :role_cs, :class => "" %>
 					</div>
 
 					<div class="field input-field">
 						<%= f.label :role_lol, "League Of Legends" %>
-						<%= f.text_field :role_lol, :class => "validate" %>
+						<%= f.text_field :role_lol, :class => "" %>
 					</div>
 				</div>
 			</div>
-			
+
+
+			<div class="row">
+				<p>Armes :</p>
+				<div class="col s12 m6">
+					<div class="field input-field">
+						<input type="checkbox" id="AK-47" />
+     					<label for="AK-47">AK-47</label>
+					</div>
+					<div class="field input-field">
+						<input type="checkbox" id="AWP" />
+     					<label for="AWP">AWP</label>
+					</div>
+					<div class="field input-field">
+						<input type="checkbox" id="SSG-08" />
+     					<label for="SSG-08">SSG-08</label>
+					</div>
+				</div>
+				<div class="col s12 m6">
+					<div class="field input-field">
+						<input type="checkbox" id="M4A1-S" />
+     					<label for="M4A1-S">M4A1-S</label>
+					</div>
+					<div class="field input-field">
+						<input type="checkbox" id="Nova" />
+     					<label for="Nova">Nova</label>
+					</div>
+					<div class="field input-field">
+						<input type="checkbox" id="P90" />
+     					<label for="P90">P90</label>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<p>Champions :</p>
+				<div class="col s12 m6">
+					<div class="field input-field">
+						<input type="checkbox" id="Lucian" />
+     					<label for="Lucian">Lucian</label>
+					</div>
+					<div class="field input-field">
+						<input type="checkbox" id="thresh" />
+     					<label for="thresh">thresh</label>
+					</div>
+					<div class="field input-field">
+						<input type="checkbox" id="Braum" />
+     					<label for="Braum">Braum</label>
+					</div>
+				</div>
+				<div class="col s12 m6">
+					<div class="field input-field">
+						<input type="checkbox" id="Léona" />
+     					<label for="Léona">Léona</label>
+					</div>
+					<div class="field input-field">
+						<input type="checkbox" id="Vayne" />
+     					<label for="Vayne">Vayne</label>
+					</div>
+					<div class="field input-field">
+						<input type="checkbox" id="Tamere" />
+     					<label for="Tamere">Tamere</label>
+					</div>
+				</div>
+			</div>
+
 			<div class="row">
 				<div class="col s12">
 					<div class="btnlog actions">
@@ -102,6 +191,9 @@
 					</div>
 				</div>
 			</div>
+
+
+
 		<% end %>
 
 		<%= link_to 'Retour', admin_team_members_path %>
