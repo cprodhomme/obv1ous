@@ -41,6 +41,6 @@ class Admin::TeamMembersController < Admin::DashboardController
 	private
 
     def member_params
-      params.require(:team_member).permit(:name, :id_steam)
+      params.require(:team_member).permit(:name, :id_steam, :color, :avatar, :avatar_color, :description, :rank_cs, :rank_lol, :role_cs, :role_lol)
     end
 end

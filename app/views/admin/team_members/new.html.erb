@@ -1,28 +1,115 @@
-<div class="row">
-	<div class="col s12">
 		<%= form_for(@member, url: admin_team_members_path, html: { method: :post }, id: 'new_news') do |f| %>
 
-			<% @member.errors.full_messages.each do |msg| %>
-				<%= msg %>
-			<% end %>
-
-			<div class="field input-field">
-				<%= f.label :name, "Nom" %>
-				<%= f.text_field :name, autofocus: true, :class => "validate" %>
+			<div class="row">
+				<div class="col s12">
+					<% @member.errors.full_messages.each do |msg| %>
+						<%= msg %>
+					<% end %>
+				</div>
 			</div>
 
-			<div class="field input-field">
-				<%= f.label :id_steam, "ID Steam" %>
-				<%= f.text_field :id_steam, :class => "validate" %>
+			<div class="row">
+				<div class="col s12 m6">
+					<div class="field input-field">
+						<%= f.label :name, "Nom" %>
+						<%= f.text_field :name, autofocus: true, :class => "validate" %>
+					</div>
+
+					<div class="field input-field">
+						<%= f.label :id_steam, "ID Steam" %>
+						<%= f.text_field :id_steam, :class => "validate" %>
+					</div>
+
+					<div class="field input-field">
+						<%= f.radio_button :color, 'blue', :name => 'group1', :id => 'radio_blue' %>
+						<%= f.radio_button :color, 'green', :name => 'group1', :id => 'radio_green' %>
+						<%= f.radio_button :color, 'orange', :name => 'group1' %>
+						<%= f.radio_button :color, 'yellow', :name => 'group1' %>
+						<%= f.radio_button :color, 'purple', :name => 'group1' %>
+					</div>
+
+					<div class="field input-field">
+						<%= f.radio_button :avatar_color, 'blue', :name => 'group2', :id => 'radio_blue' %>
+						<%= f.radio_button :avatar_color, 'green', :name => 'group2', :id => 'radio_green' %>
+						<%= f.radio_button :avatar_color, 'orange', :name => 'group2' %>
+						<%= f.radio_button :avatar_color, 'yellow', :name => 'group2' %>
+						<%= f.radio_button :avatar_color, 'purple', :name => 'group2' %>
+					</div>
+				</div>
+
+				<div class="col s12 m6">
+					<div class="field input-field">
+						<div><%= f.label :avatar %></div>
+						<div class="file-field input-field">
+							<div class="btn">
+								<span>Avatar</span>
+								<%= f.file_field :avatar %>
+							</div>
+								<div class="file-path-wrapper">
+								<input class="file-path validate" type="text">
+							</div>
+					    </div>
+						<div class="img-news">
+							<%= image_tag(@member.avatar) if @member.avatar? %>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col s12">
+					<div class="field input-field">
+						<%= f.label :description, "Description" %>
+						<%= f.text_area :description, :class => "materialize-textarea"  %>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col s12 m6">
+					<p>Grade :</p>
+					<div class="field input-field">
+						<%= f.label :rank_cs, "Counter Strike" %>
+						<%= f.text_field :rank_cs, :class => "validate" %>
+					</div>
+
+					<div class="field input-field">
+						<%= f.label :rank_lol, "League Of Legends" %>
+						<%= f.text_field :rank_lol, :class => "validate" %>
+					</div>
+				</div>
+
+				<div class="col s12 m6">
+					<p>Rôles :</p>
+					<div class="field input-field">
+						<%= f.label :role_cs, "Counter Strike" %>
+						<%= f.text_field :role_cs, :class => "validate" %>
+					</div>
+
+					<div class="field input-field">
+						<%= f.label :role_lol, "League Of Legends" %>
+						<%= f.text_field :role_lol, :class => "validate" %>
+					</div>
+				</div>
 			</div>
 			
-			<div class="btnlog actions">
-				<%= button_tag(type: 'submit', class: "btn") do %>
-					Publier <i class='material-icons right'>send</i>
-				<% end %>
+			<div class="row">
+				<div class="col s12">
+					<div class="btnlog actions">
+						<%= button_tag(type: 'submit', class: "btn") do %>
+							Publier <i class='material-icons right'>send</i>
+						<% end %>
+					</div>
+				</div>
 			</div>
 		<% end %>
 
 		<%= link_to 'Retour', admin_team_members_path %>
 	</div>
 </div>
+
+<script>
+$(document).ready(function() {
+    $('select').material_select();
+  });
+</script>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151114155956) do
+ActiveRecord::Schema.define(version: 20151118165514) do
 
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string   "data_file_name",    limit: 255, null: false
@@ -56,11 +56,45 @@ ActiveRecord::Schema.define(version: 20151114155956) do
   end
 
   create_table "team_members", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.string   "id_steam",   limit: 255
+    t.string   "name",         limit: 255
+    t.string   "id_steam",     limit: 255
+    t.string   "color",        limit: 255
+    t.string   "avatar_color", limit: 255
+    t.text     "description",  limit: 65535
+    t.string   "rank_cs",      limit: 255
+    t.string   "rank_lol",     limit: 255
+    t.string   "role_cs",      limit: 255
+    t.string   "role_lol",     limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "team_members_champions", force: :cascade do |t|
+    t.integer  "team_members_id", limit: 4
+    t.string   "name_champion",   limit: 255
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
+
+  add_index "team_members_champions", ["team_members_id"], name: "index_team_members_champions_on_team_members_id", using: :btree
+
+  create_table "team_members_games", force: :cascade do |t|
+    t.integer  "team_members_id", limit: 4
+    t.string   "name_game",       limit: 255
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
+
+  add_index "team_members_games", ["team_members_id"], name: "index_team_members_games_on_team_members_id", using: :btree
+
+  create_table "team_members_weapons", force: :cascade do |t|
+    t.integer  "team_members_id", limit: 4
+    t.string   "name_weapon",     limit: 255
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
+
+  add_index "team_members_weapons", ["team_members_id"], name: "index_team_members_weapons_on_team_members_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "",   null: false
