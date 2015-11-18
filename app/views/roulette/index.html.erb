@@ -2,10 +2,10 @@
     <h4>Strat Roulette</h4>
 
     <div class="col s6 select-team">
-        <a class="waves-effect waves-light btn CT">CT Strats</a>
+        <%= link_to 'CT Strats', roulette_CT_path, method: :patch, remote: true, :class => 'waves-effect waves-light btn CT' %>
     </div>
     <div class="col s6 select-team">
-        <a class="waves-effect waves-light btn T">T Strats</a>
+        <%= link_to 'T Strats', roulette_T_path, method: :patch, remote: true, :class => 'waves-effect waves-light btn T' %>
     </div>
     <div class="col s12 content-roulette">
         <blockquote class="content-strat" style="display:none;"></blockquote>

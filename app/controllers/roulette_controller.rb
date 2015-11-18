@@ -5,10 +5,12 @@ class RouletteController < ApplicationController
 	end
 
 	def getCTStat
-		@roulette = Roulette.where("team = 'CT'").limit(1).order("RANDOM()")
+		@roulette = Roulette.where("team = 'CT'")
+		@roulette = @roulette.sample
 	end
 
 	def getTStat
-		@roulette = Roulette.where("team = 'T'").limit(1).order("RANDOM()")
+		@roulette = Roulette.where("team = 'T'")
+		@roulette = @roulette.sample
 	end
 end

@@ -16,8 +16,9 @@ Rails.application.routes.draw do
   resources :team, only: [:index, :show]
   resources :gallery, only: [:index]
   resources :roulette, only: [:index]
-  get '/roulette/CT' => 'roulette#getCTStat'
-  get '/roulette/T' => 'roulette#getTStat'
+
+  patch '/roulette/CT' => 'roulette#getCTStat'
+  patch '/roulette/T' => 'roulette#getTStat'
 
   namespace :admin do
     get '/' => 'dashboard#index'
