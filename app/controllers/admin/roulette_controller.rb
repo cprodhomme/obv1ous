@@ -27,7 +27,7 @@ class Admin::RouletteController < Admin::DashboardController
 
 	    if @roulette.update_attributes(roulette_params)
 	      # Handle a successful update.
-	      redirect_to edit_admin_roulette_index_path(@roulette.id), notice: 'Votre roulette a bien été modifier'
+	      redirect_to edit_admin_roulette_path(@roulette.id), notice: 'Votre roulette a bien été modifier'
 	    else
 	      render 'edit'
 	    end
