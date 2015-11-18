@@ -72,8 +72,9 @@
 								<input class="file-path " type="text">
 							</div>
 					    </div>
-						<div class="img-news">
-							<%= image_tag(@member.avatar) if @member.avatar? %>
+						<div class="img-avatar">
+							<img src="https://yt3.ggpht.com/-uRtkLFWJv-A/AAAAAAAAAAI/AAAAAAAAAAA/UCwptM94vtQ/s100-c-k-no/photo.jpg" alt="" />
+							<!-- <%= image_tag(@member.avatar) if @member.avatar? %> -->
 						</div>
 					</div>
 				</div>
@@ -118,7 +119,10 @@
 
 
 			<div class="row">
-				<p>Armes :</p>
+				<div class="col s12">
+					<p>Armes :</p>
+				</div>
+
 				<div class="col s12 m6">
 					<div class="field input-field">
 						<input type="checkbox" id="AK-47" />
@@ -151,7 +155,9 @@
 
 
 			<div class="row">
-				<p>Champions :</p>
+				<div class="col s12">
+					<p>Champions :</p>
+				</div>
 				<div class="col s12 m6">
 					<div class="field input-field">
 						<input type="checkbox" id="Lucian" />

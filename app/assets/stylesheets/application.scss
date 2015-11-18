@@ -239,7 +239,12 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
     }
     .content-roulette{
         min-height:150px;
+        margin-top: 20px;
     }
+}
+.img-avatar{
+    width:100%;
+    text-align: center;
 }
 .radio-color{
 
@@ -355,5 +360,11 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
     }
     #radio_red2:not(:checked) + label:before{
         border:2px solid #ef3c49;
+    }
+
+
+    [type="radio"] + label:before, [type="radio"] + label:after{
+        width: 24px;
+        height: 24px;
     }
 }
