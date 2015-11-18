@@ -22,7 +22,7 @@
 
 
 					<div class="field input-field radio-color">
-						<p>Couleur IG</p>
+						<p class="bold">Couleur IG :</p>
 						<%= f.radio_button :color, 'blue', :name => 'group1', :id => 'radio_blue' %>
 						<label for="radio_blue" id="blue"></label>
 						<%= f.radio_button :color, 'green', :name => 'group1', :id => 'radio_green' %>
@@ -36,7 +36,7 @@
 					</div>
 
 					<div class="field input-field radio-color">
-						<p>Couleur Icone</p>
+						<p class="bold">Couleur Icone :</p>
 						<%= f.radio_button :avatar_color, 'blue', :name => 'group2', :id => 'radio_blue2' %>
 						<label for="radio_blue2" id="blue2"></label>
 						<%= f.radio_button :avatar_color, 'green', :name => 'group2', :id => 'radio_green2' %>
@@ -74,7 +74,7 @@
 					    </div>
 						<div class="img-avatar">
 							<img src="https://yt3.ggpht.com/-uRtkLFWJv-A/AAAAAAAAAAI/AAAAAAAAAAA/UCwptM94vtQ/s100-c-k-no/photo.jpg" alt="" />
-							<!-- <%= image_tag(@member.avatar) if @member.avatar? %> -->
+							<%= image_tag(@member.avatar) if @member.avatar? %>
 						</div>
 					</div>
 				</div>
@@ -91,7 +91,7 @@
 
 			<div class="row">
 				<div class="col s12 m6">
-					<p>Grade :</p>
+					<p class="bold">Grade :</p>
 					<div class="field input-field">
 						<%= f.label :rank_cs, "Counter Strike" %>
 						<%= f.text_field :rank_cs, :class => "" %>
@@ -104,7 +104,7 @@
 				</div>
 
 				<div class="col s12 m6">
-					<p>Rôles :</p>
+					<p class="bold">Rôles :</p>
 					<div class="field input-field">
 						<%= f.label :role_cs, "Counter Strike" %>
 						<%= f.text_field :role_cs, :class => "" %>
@@ -120,7 +120,7 @@
 
 			<div class="row">
 				<div class="col s12">
-					<p>Armes :</p>
+					<p class="bold">Armes :</p>
 				</div>
 
 				<div class="col s12 m6">
@@ -156,7 +156,7 @@
 
 			<div class="row">
 				<div class="col s12">
-					<p>Champions :</p>
+					<p class="bold">Champions :</p>
 				</div>
 				<div class="col s12 m6">
 					<div class="field input-field">
