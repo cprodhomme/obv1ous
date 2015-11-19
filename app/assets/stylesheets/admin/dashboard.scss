@@ -191,6 +191,18 @@
     .champ{
         margin-bottom: 20px;
     }
+    [type="checkbox"].filled-in:checked + label:after{
+        border: 2px solid #0288d1;
+        background-color: #0288d1;
+    }
+    .weladm{
+        text-align: center;
+    }
+    #WelcomAdmin{
+        font-weight: bold;
+        margin-top: 50px;
+        font-size: 20px;
+    }
 }
 .collapsible{
     border:none !important;
