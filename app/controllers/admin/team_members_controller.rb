@@ -81,12 +81,23 @@ class Admin::TeamMembersController < Admin::DashboardController
 				 'AWP',
 				 'Support']
 
+	@games = ['CS-GO',
+			  'League Of Legends',
+			  'Rust',
+			  'Block N Load',
+			  'Rocket League',
+			  'Minecraft']
+
 	def index
 		@members = TeamMember.order('id desc')
 	end
 
 	def new
 		@member = TeamMember.new
+
+		#@member_game = @order.team_members_games.build
+		#@member_weapons = @order.team_members_games.build
+		#@member_game = @order.team_members_games.build
 	end
 
 	def create
@@ -101,6 +112,7 @@ class Admin::TeamMembersController < Admin::DashboardController
 
 	def edit
 		@member = TeamMember.find(params[:id])
+		#@member = TeamMember.joins(:TeamMembersChampion, :TeamMembersWeapon, :TeamMembersGame)
 	end
 
 	def update
