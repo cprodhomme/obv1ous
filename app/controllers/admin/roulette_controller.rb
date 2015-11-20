@@ -41,6 +41,6 @@ class Admin::RouletteController < Admin::DashboardController
 	private
 
     def roulette_params
-      params.require(:roulette).permit(:team, :strat)
+    	params.require(:roulette).permit(:team, :name, :strat)
     end
 end

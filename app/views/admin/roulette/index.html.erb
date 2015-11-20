@@ -5,7 +5,7 @@
 				<tr>
 					<th data-field="id">Id</th>
 					<th data-field="name">Team</th>
-					<th data-field="strat">Strat</th>
+					<th data-field="strat">Nom Strat</th>
 					<th  class="right" data-field="price">Action</th>
 				</tr>
 			</thead>
@@ -14,7 +14,7 @@
 					<tr>
 						<td><%= roulette.id %></td>
 						<td><%= roulette.team %></td>
-						<td><%= roulette.strat %></td>
+						<td><%= roulette.name %></td>
 						<td class="right">
 							<%= link_to edit_admin_roulette_path(id: roulette.id), { :class => "waves-effect waves-light btn"} do %>
 								<i class="material-icons small">mode_edit</i>

@@ -14,6 +14,11 @@
 			</div>
 
 			<div class="field input-field">
+				<%= f.label :name, "Nom strat" %>
+				<%= f.text_field :name, :class => "validate" %>
+			</div>
+
+			<div class="field input-field">
 				<%= f.label :strat, "Strat" %>
 				<%= f.text_area :strat, length: {minimum: 10}, :class => "materialize-textarea"  %>
 			</div>

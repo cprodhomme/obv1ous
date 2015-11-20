@@ -6,7 +6,7 @@
 				<%= msg %>
 			<% end %>
 
-			<div class="field input-field col s12">
+			<div class="field input-field">
 				<%= f.select(:team) do %>
 					<% [['CT', 'CT'], ['T', 'T']].each do |c| -%>
 						<%= content_tag(:option, c.first, value: c.last) %>
@@ -14,7 +14,12 @@
 				<% end %>
 			</div>
 
-			<div class="field input-field col s12">
+			<div class="field input-field">
+				<%= f.label :name, "Nom strat" %>
+				<%= f.text_field :name, :class => "validate" %>
+			</div>
+
+			<div class="field input-field">
 				<%= f.label :strat, "Strat" %>
 				<%= f.text_area :strat, length: {minimum: 10}, :class => "materialize-textarea"  %>
 			</div>
