@@ -103,6 +103,10 @@ header{
 }
 .page-footer{
     background:#DB8A8A;
+    bottom: 0;
+    position: relative;
+    right: 0;
+    left: 0;
 }
 .waves-button-input{
     border:none;
@@ -177,6 +181,7 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
             width: 50px;
             margin-left: 10px;
             margin-top: 10px;
+            border: 3px solid #f4f4f4;
         }
     }
 

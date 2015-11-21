@@ -14,3 +14,20 @@
 //= require jquery_ujs
 //= require_tree .
 //= require materialize-sprockets
+var heigthScreen = $( document ).height();
+var heigthContent = $("body").height();
+
+$( document ).ready(function() {
+
+
+
+    if(heigthContent < heigthScreen){
+        $(".page-footer").css("position","fixed");
+    }
+    else {
+        $(".page-footer").css("position","relative");
+    }
+
+// console.log(heigthContent);
+// console.log(heigthScreen);
+});
