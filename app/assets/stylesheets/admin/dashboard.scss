@@ -148,6 +148,10 @@
             border: 2px solid #ef3c49;
             background-color: #ef3c49;
         }
+        #radio_black2:checked + label:after{
+            border: 2px solid #242424;
+            background-color: #242424;
+        }
 
 
 
@@ -181,7 +185,9 @@
         #radio_red2:not(:checked) + label:before{
             border:2px solid #ef3c49;
         }
-
+        #radio_black2:not(:checked) + label:before{
+            border:2px solid #242424;
+        }
 
         [type="radio"] + label:before, [type="radio"] + label:after{
             width: 24px;
