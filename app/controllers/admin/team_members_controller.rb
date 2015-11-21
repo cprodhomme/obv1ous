@@ -94,10 +94,15 @@ class Admin::TeamMembersController < Admin::DashboardController
 
 	def new
 		@member = TeamMember.new
+		@member.inspect
+		#@member.team_members_games.build
+		@member_games = TeamMembersGame.new
+		@member_weapons = TeamMembersWeapon.new
+		@member_champions = TeamMembersChampion.new
 
-		#@member_game = @order.team_members_games.build
-		#@member_weapons = @order.team_members_games.build
-		#@member_game = @order.team_members_games.build
+		#@member_games = @member.team_members_games.build
+		#@member_weapons = @member.team_members_weapons.build
+		#@member_champions = @member.team_members_champions.build
 	end
 
 	def create
@@ -112,6 +117,8 @@ class Admin::TeamMembersController < Admin::DashboardController
 
 	def edit
 		@member = TeamMember.find(params[:id])
+
+		@member_game = @member.team_members_games
 		#@member = TeamMember.joins(:TeamMembersChampion, :TeamMembersWeapon, :TeamMembersGame)
 	end
 
@@ -134,6 +141,19 @@ class Admin::TeamMembersController < Admin::DashboardController
 	private
 
     def member_params
-      params.require(:team_member).permit(:name, :id_steam, :color, :avatar, :avatar_color, :description, :rank_cs, :rank_lol, :role_cs, :role_lol)
+      	params.require(:team_member).permit(:name, :id_steam, :color, :avatar, :avatar_color, :description, :rank_cs, :rank_lol, :role_cs, :role_lol)
     end
+
+    def member_games
+    	params.require(:team_members_games).permit(:team_members_id, :name_game)
+    end
+
+    def member_weapons
+    	params.require(:team_members_weapons).permit(:team_members_id, :name_weapon)
+    end
+
+    def member_champions
+    	params.require(:team_members_champions).permit(:team_members_id, :name_champion)
+    end
+
 end

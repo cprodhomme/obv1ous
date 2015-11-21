@@ -25,7 +25,9 @@ Rails.application.routes.draw do
     resources :dashboard, only: [:index]
     resources :articles, except: [:show]
     resources :users, except: [:show]
-    resources :team_members, except: [:show]
+    resources :team_members, except: [:show] do
+      resources :team_members_games
+    end
     resources :gallery, except: [:show]
     resources :roulette, except: [:show]
   end

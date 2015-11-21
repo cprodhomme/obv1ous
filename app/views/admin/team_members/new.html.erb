@@ -1,40 +1,75 @@
-		<%= form_for(@member, url: admin_team_members_path, html: { method: :post }, id: 'new_news') do |f| %>
+<%= form_for([@member, @member_games], url: admin_team_members_path, html: { method: :post }, id: 'new_news') do |f| %>
+	<%= @member.inspect %>
+	<%= @member_games.inspect %>
+	<div class="row">
+		<div class="col s12">
+			<% @member.errors.full_messages.each do |msg| %>
+				<%= msg %>
+			<% end %>
+		</div>
+	</div>
 
-			<div class="row">
-				<div class="col s12">
-					<% @member.errors.full_messages.each do |msg| %>
-						<%= msg %>
-					<% end %>
-				</div>
+	<div class="row">
+		<div class="col s12 m6">
+			<div class="field input-field">
+				<%= f.label :name, "Nom" %>
+				<%= f.text_field :name, autofocus: true, :class => "" %>
 			</div>
 
-			<div class="row">
-				<div class="col s12 m6">
-					<div class="field input-field">
-						<%= f.label :name, "Nom" %>
-						<%= f.text_field :name, autofocus: true, :class => "" %>
-					</div>
-
-					<div class="field input-field">
-						<%= f.label :id_steam, "ID Steam" %>
-						<%= f.text_field :id_steam, :class => "" %>
-					</div>
+			<div class="field input-field">
+				<%= f.label :id_steam, "ID Steam" %>
+				<%= f.text_field :id_steam, :class => "" %>
+			</div>
 
 
-					<div class="field input-field radio-color">
-						<p class="bold">Couleur IG :</p>
-						<%= f.radio_button :color, 'blue', :name => 'group1', :id => 'radio_blue' %>
-						<label for="radio_blue" id="blue"></label>
-						<%= f.radio_button :color, 'green', :name => 'group1', :id => 'radio_green' %>
-						<label for="radio_green" id="green"></label>
-						<%= f.radio_button :color, 'orange', :name => 'group1', :id => 'radio_orange' %>
-						<label for="radio_orange" id="orange"></label>
-						<%= f.radio_button :color, 'yellow', :name => 'group1', :id => 'radio_yellow' %>
-						<label for="radio_yellow" id="yellow"></label>
-						<%= f.radio_button :color, 'purple', :name => 'group1', :id => 'radio_purple' %>
-						<label for="radio_purple" id="purple"></label>
-					</div>
+			<div class="field input-field radio-color">
+				<p class="bold">Couleur IG :</p>
+				<%= f.radio_button :color, 'blue', :name => 'group1', :id => 'radio_blue' %>
+				<label for="radio_blue" id="blue"></label>
+				<%= f.radio_button :color, 'green', :name => 'group1', :id => 'radio_green' %>
+				<label for="radio_green" id="green"></label>
+				<%= f.radio_button :color, 'orange', :name => 'group1', :id => 'radio_orange' %>
+				<label for="radio_orange" id="orange"></label>
+				<%= f.radio_button :color, 'yellow', :name => 'group1', :id => 'radio_yellow' %>
+				<label for="radio_yellow" id="yellow"></label>
+				<%= f.radio_button :color, 'purple', :name => 'group1', :id => 'radio_purple' %>
+				<label for="radio_purple" id="purple"></label>
+			</div>
 
+			<div class="field input-field radio-color">
+				<p class="bold">Couleur Icone :</p>
+				<%= f.radio_button :avatar_color, 'blue', :name => 'group2', :id => 'radio_blue2' %>
+				<label for="radio_blue2" id="blue2"></label>
+				<%= f.radio_button :avatar_color, 'green', :name => 'group2', :id => 'radio_green2' %>
+				<label for="radio_green2" id="green2"></label>
+				<%= f.radio_button :avatar_color, 'orange', :name => 'group2', :id => 'radio_orange2'%>
+				<label for="radio_orange2" id="orange2"></label>
+				<%= f.radio_button :avatar_color, 'yellow', :name => 'group2', :id => 'radio_yellow2'%>
+				<label for="radio_yellow2" id="yellow2"></label>
+				<%= f.radio_button :avatar_color, 'purple', :name => 'group2', :id => 'radio_purple2'%>
+				<label for="radio_purple2" id="purple2"></label>
+				<%= f.radio_button :avatar_color, 'jade', :name => 'group2', :id => 'radio_jade2'%>
+				<label for="radio_jade2" id="jade2"></label>
+				<%= f.radio_button :avatar_color, 'red', :name => 'group2', :id => 'radio_red2'%>
+				<label for="radio_red2" id="red2"></label>
+				<%= f.radio_button :avatar_color, 'grey', :name => 'group2', :id => 'radio_grey2'%>
+				<label for="radio_grey2" id="grey2"></label>
+				<%= f.radio_button :avatar_color, 'pink', :name => 'group2', :id => 'radio_pink2'%>
+				<label for="radio_pink2" id="pink2"></label>
+				<%= f.radio_button :avatar_color, 'brown', :name => 'group2', :id => 'radio_brown2'%>
+				<label for="radio_brown2" id="brown2"></label>
+			</div>
+		</div>
+
+<<<<<<< HEAD
+		<div class="col s12 m6">
+			<div class="field input-field">
+				<div><%= f.label :avatar %></div>
+				<div class="file-field input-field">
+					<div class="btn">
+						<span>Avatar</span>
+						<%= f.file_field :avatar %>
+=======
 					<div class="field input-field radio-color">
 						<p class="bold">Couleur Icone :</p>
 						<%= f.radio_button :avatar_color, 'blue', :name => 'group2', :id => 'radio_blue2' %>
@@ -60,204 +95,197 @@
 						<%= f.radio_button :avatar_color, 'brown', :name => 'group2', :id => 'radio_brown2'%>
 						<label for="radio_brown2" id="brown2"></label>
 
+>>>>>>> b3ce2f0e8eb70566284b6919fc926b1451476dd9
 					</div>
-				</div>
-
-				<div class="col s12 m6">
-					<div class="field input-field">
-						<div><%= f.label :avatar %></div>
-						<div class="file-field input-field">
-							<div class="btn">
-								<span>Avatar</span>
-								<%= f.file_field :avatar %>
-							</div>
-								<div class="file-path-wrapper">
-								<input class="file-path " type="text">
-							</div>
-					    </div>
-						<div class="img-avatar">
-							<img src="https://yt3.ggpht.com/-uRtkLFWJv-A/AAAAAAAAAAI/AAAAAAAAAAA/UCwptM94vtQ/s100-c-k-no/photo.jpg" alt="" />
-							<%= image_tag(@member.avatar) if @member.avatar? %>
-						</div>
+						<div class="file-path-wrapper">
+						<input class="file-path " type="text">
 					</div>
+			    </div>
+				<div class="img-avatar">
+					<img src="https://yt3.ggpht.com/-uRtkLFWJv-A/AAAAAAAAAAI/AAAAAAAAAAA/UCwptM94vtQ/s100-c-k-no/photo.jpg" alt="" />
+					<%= image_tag(@member.avatar) if @member.avatar? %>
 				</div>
 			</div>
-
-			<div class="row">
-				<div class="col s12">
-					<div class="field input-field">
-						<%= f.label :description, "Description" %>
-						<%= f.text_area :description, :class => "materialize-textarea"  %>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col s12">
-					<p class="bold">
-						Jeux :
-					</p>
-				</div>
-				<div class="col s12 m6">
-
-					<div class="field input-field">
-						<input type="checkbox" class="filled-in" id="CSGO" />
-     					<label for="CSGO">Counter strike GO</label>
-					</div>
-					<div class="field input-field">
-						<input type="checkbox" class="filled-in" id="BlockNLoad" />
-     					<label for="BlockNLoad">Block N Load</label>
-					</div>
-					<div class="field input-field">
-						<input type="checkbox" class="filled-in" id="Minecraft" />
-     					<label for="Minecraft">Minecraft</label>
-					</div>
-				</div>
-				<div class="col s12 m6">
-					<div class="field input-field">
-						<input type="checkbox" class="filled-in" id="LOL" />
-     					<label for="LOL">League of legend</label>
-					</div>
-					<div class="field input-field">
-						<input type="checkbox" class="filled-in" id="RocketLeague" />
-     					<label for="RocketLeague">Rocket League</label>
-					</div>
-					<div class="field input-field">
-						<input type="checkbox" class="filled-in" id="Rust" />
-     					<label for="Rust">Rust</label>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col s12 m6">
-					<p class="bold">Grade :</p>
-					<div class="field input-field">
-						<%= f.select(:rank_cs) do %>
-							<% [['Silver 1', 'Silver 1'],['Silver 2', 'Silver 2'],['Silver 3', 'Silver 3'],['Silver 4', 'Silver 4'],['Silver Elite', 'Silver Elite'],['Silver Elite master', 'Silver Elite master'],['Gold Nova 1', 'Gold Nova 1'],['Gold Nova 2', 'Gold Nova 2'],['Gold Nova 3', 'Gold Nova 3'],['Gold Nova 4', 'Gold Nova 4'],['Master Guardian 1', 'Master Guardian 1'],['Master Guardian 2', 'Master Guardian 2'],['Master Guardian elite', 'Master Guardian elite'],['Distinuished Master Guardian', 'Distinuished Master Guardian'],['Legendary Eagle', 'Legendary Eagle'],['Legendary Eagle Master', 'Legendary Eagle Master'],['Suprem Master First Class', 'Suprem Master First Class'],['The Global Elite', 'The Global Elite']].each do |c| -%>
-								<%= content_tag(:option, c.first, value: c.last) %>
-							<% end %>
-						<% end %>
-					</div>
-
-					<div class="field input-field">
-						<%= f.select(:rank_lol) do %>
-							<% [['Bronze 5', 'Bronze 5'], ['Bronze 4', 'Bronze 4'], ['Bronze 3', 'Bronze 3'], ['Bronze 2', 'Bronze 2'],['Bronze 2', 'Bronze 2'],['Bronze 1', 'Bronze 1'],['Silver 5', 'Silver 5'], ['Silver 4', 'Silver 4'], ['Silver 3', 'Silver 3'], ['Silver 2', 'Silver 2'],['Silver 2', 'Silver 2'],['Silver 1', 'Silver 1'],['Gold 5', 'Gold 5'], ['Gold 4', 'Gold 4'], ['Gold 3', 'Gold 3'], ['Gold 2', 'Gold 2'],['Gold 2', 'Gold 2'],['Gold 1', 'Gold 1'],['Platine 5', 'Platine 5'], ['Platine 4', 'Platine 4'], ['Platine 3', 'Platine 3'], ['Platine 2', 'Platine 2'],['Platine 2', 'Platine 2'],['Platine 1', 'Platine 1'],['Diamond 5', 'Diamond 5'], ['Diamond 4', 'Diamond 4'], ['Diamond 3', 'Diamond 3'], ['Diamond 2', 'Diamond 2'],['Diamond 2', 'Diamond 2'],['Diamond 1', 'Diamond 1'],['Master', 'Master'],['Challenger', 'Challenger']].each do |c| -%>
-								<%= content_tag(:option, c.first, value: c.last) %>
-							<% end %>
-						<% end %>
-					</div>
-				</div>
-
-				<div class="col s12 m6">
-					<p class="bold">Rôles :</p>
-					<div class="field input-field">
-						<%= f.select(:role_cs) do %>
-							<% [['Open Frag', 'Open Frag'],['AWP', 'AWP'],['Support', 'Support']].each do |c| -%>
-								<%= content_tag(:option, c.first, value: c.last) %>
-							<% end %>
-						<% end %>
-					</div>
-
-					<div class="field input-field">
-						<%= f.select(:role_lol) do %>
-							<% [['Top', 'Top'],['Jungle', 'Jungle'],['Mid', 'Mid'],['ADC', 'ADC'],['Support', 'Support']].each do |c| -%>
-								<%= content_tag(:option, c.first, value: c.last) %>
-							<% end %>
-						<% end %>
-					</div>
-				</div>
-			</div>
-
-
-			<div class="row">
-				<div class="col s12">
-					<p class="bold">Armes :</p>
-				</div>
-
-				<div class="col s12 m6 l4">
-					<div class="field input-field">
-						<input type="checkbox" class="filled-in" id="AK-47" />
-     					<label for="AK-47">AK-47</label>
-					</div>
-					<div class="field input-field">
-						<input type="checkbox" class="filled-in" id="AWP" />
-     					<label for="AWP">AWP</label>
-					</div>
-					<div class="field input-field">
-						<input type="checkbox" class="filled-in" id="SSG-08" />
-     					<label for="SSG-08">SSG-08</label>
-					</div>
-				</div>
-				<div class="col s12 m6 l4">
-					<div class="field input-field">
-						<input type="checkbox" class="filled-in" id="M4A1-S" />
-     					<label for="M4A1-S">M4A1-S</label>
-					</div>
-					<div class="field input-field">
-						<input type="checkbox" class="filled-in" id="Nova" />
-     					<label for="Nova">Nova</label>
-					</div>
-					<div class="field input-field">
-						<input type="checkbox" class="filled-in" id="P90" />
-     					<label for="P90">P90</label>
-					</div>
-				</div>
-				<div class="col s12 m6 l4">
-
-				</div>
-			</div>
-
-
-			<div class="row champ">
-				<div class="col s12">
-					<p class="bold">Champions :</p>
-				</div>
-				<div class="col s12 m6">
-					<div class="field input-field">
-						<input type="checkbox" id="Lucian" />
-     					<label for="Lucian">Lucian</label>
-					</div>
-					<div class="field input-field">
-						<input type="checkbox" id="thresh" />
-     					<label for="thresh">thresh</label>
-					</div>
-					<div class="field input-field">
-						<input type="checkbox" id="Braum" />
-     					<label for="Braum">Braum</label>
-					</div>
-				</div>
-				<div class="col s12 m6">
-					<div class="field input-field">
-						<input type="checkbox" id="Léona" />
-     					<label for="Léona">Léona</label>
-					</div>
-					<div class="field input-field">
-						<input type="checkbox" id="Vayne" />
-     					<label for="Vayne">Vayne</label>
-					</div>
-					<div class="field input-field">
-						<input type="checkbox" id="Tamere" />
-     					<label for="Tamere">Tamere</label>
-					</div>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col s12">
-					<div class="btnlog actions">
-						<%= button_tag(type: 'submit', class: "btn") do %>
-							Publier <i class='material-icons right'>send</i>
-						<% end %>
-					</div>
-				</div>
-			</div>
-
-
-
-		<% end %>
-
-		<%= link_to 'Retour', admin_team_members_path %>
+		</div>
 	</div>
-</div>
+
+	<div class="row">
+		<div class="col s12">
+			<div class="field input-field">
+				<%= f.label :description, "Description" %>
+				<%= f.text_area :description, :class => "materialize-textarea"  %>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col s12">
+			<p class="bold">
+				Jeux :
+			</p>
+		</div>
+		<div class="col s12 m6">
+
+			<div class="field input-field">
+				<%= f.check_box :name_game, {:class => "filled-in"}, "checked-value", "unchecked-value" %>
+			</div>
+			
+			<div class="field input-field">
+				<input type="checkbox" class="filled-in" id="CSGO" />
+				<label for="CSGO">Counter strike GO</label>
+			</div>
+			<div class="field input-field">
+				<input type="checkbox" class="filled-in" id="BlockNLoad" />
+				<label for="BlockNLoad">Block N Load</label>
+			</div>
+			<div class="field input-field">
+				<input type="checkbox" class="filled-in" id="Minecraft" />
+				<label for="Minecraft">Minecraft</label>
+			</div>
+		</div>
+		<div class="col s12 m6">
+			<div class="field input-field">
+				<input type="checkbox" class="filled-in" id="LOL" />
+				<label for="LOL">League of legend</label>
+			</div>
+			<div class="field input-field">
+				<input type="checkbox" class="filled-in" id="RocketLeague" />
+					<label for="RocketLeague">Rocket League</label>
+			</div>
+			<div class="field input-field">
+				<input type="checkbox" class="filled-in" id="Rust" />
+					<label for="Rust">Rust</label>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col s12 m6">
+			<p class="bold">Grade :</p>
+			<div class="field input-field">
+				<%= f.select(:rank_cs) do %>
+					<% [['Silver 1', 'Silver 1'],['Silver 2', 'Silver 2'],['Silver 3', 'Silver 3'],['Silver 4', 'Silver 4'],['Silver Elite', 'Silver Elite'],['Silver Elite master', 'Silver Elite master'],['Gold Nova 1', 'Gold Nova 1'],['Gold Nova 2', 'Gold Nova 2'],['Gold Nova 3', 'Gold Nova 3'],['Gold Nova 4', 'Gold Nova 4'],['Master Guardian 1', 'Master Guardian 1'],['Master Guardian 2', 'Master Guardian 2'],['Master Guardian elite', 'Master Guardian elite'],['Distinuished Master Guardian', 'Distinuished Master Guardian'],['Legendary Eagle', 'Legendary Eagle'],['Legendary Eagle Master', 'Legendary Eagle Master'],['Suprem Master First Class', 'Suprem Master First Class'],['The Global Elite', 'The Global Elite']].each do |c| -%>
+						<%= content_tag(:option, c.first, value: c.last) %>
+					<% end %>
+				<% end %>
+			</div>
+
+			<div class="field input-field">
+				<%= f.select(:rank_lol) do %>
+					<% [['Bronze 5', 'Bronze 5'], ['Bronze 4', 'Bronze 4'], ['Bronze 3', 'Bronze 3'], ['Bronze 2', 'Bronze 2'],['Bronze 2', 'Bronze 2'],['Bronze 1', 'Bronze 1'],['Silver 5', 'Silver 5'], ['Silver 4', 'Silver 4'], ['Silver 3', 'Silver 3'], ['Silver 2', 'Silver 2'],['Silver 2', 'Silver 2'],['Silver 1', 'Silver 1'],['Gold 5', 'Gold 5'], ['Gold 4', 'Gold 4'], ['Gold 3', 'Gold 3'], ['Gold 2', 'Gold 2'],['Gold 2', 'Gold 2'],['Gold 1', 'Gold 1'],['Platine 5', 'Platine 5'], ['Platine 4', 'Platine 4'], ['Platine 3', 'Platine 3'], ['Platine 2', 'Platine 2'],['Platine 2', 'Platine 2'],['Platine 1', 'Platine 1'],['Diamond 5', 'Diamond 5'], ['Diamond 4', 'Diamond 4'], ['Diamond 3', 'Diamond 3'], ['Diamond 2', 'Diamond 2'],['Diamond 2', 'Diamond 2'],['Diamond 1', 'Diamond 1'],['Master', 'Master'],['Challenger', 'Challenger']].each do |c| -%>
+						<%= content_tag(:option, c.first, value: c.last) %>
+					<% end %>
+				<% end %>
+			</div>
+		</div>
+
+		<div class="col s12 m6">
+			<p class="bold">Rôles :</p>
+			<div class="field input-field">
+				<%= f.select(:role_cs) do %>
+					<% [['Open Frag', 'Open Frag'],['AWP', 'AWP'],['Support', 'Support']].each do |c| -%>
+						<%= content_tag(:option, c.first, value: c.last) %>
+					<% end %>
+				<% end %>
+			</div>
+
+			<div class="field input-field">
+				<%= f.select(:role_lol) do %>
+					<% [['Top', 'Top'],['Jungle', 'Jungle'],['Mid', 'Mid'],['ADC', 'ADC'],['Support', 'Support']].each do |c| -%>
+						<%= content_tag(:option, c.first, value: c.last) %>
+					<% end %>
+				<% end %>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="col s12">
+			<p class="bold">Armes :</p>
+		</div>
+
+		<div class="col s12 m6 l4">
+			<div class="field input-field">
+				<input type="checkbox" class="filled-in" id="AK-47" />
+					<label for="AK-47">AK-47</label>
+			</div>
+			<div class="field input-field">
+				<input type="checkbox" class="filled-in" id="AWP" />
+					<label for="AWP">AWP</label>
+			</div>
+			<div class="field input-field">
+				<input type="checkbox" class="filled-in" id="SSG-08" />
+					<label for="SSG-08">SSG-08</label>
+			</div>
+		</div>
+		<div class="col s12 m6 l4">
+			<div class="field input-field">
+				<input type="checkbox" class="filled-in" id="M4A1-S" />
+					<label for="M4A1-S">M4A1-S</label>
+			</div>
+			<div class="field input-field">
+				<input type="checkbox" class="filled-in" id="Nova" />
+					<label for="Nova">Nova</label>
+			</div>
+			<div class="field input-field">
+				<input type="checkbox" class="filled-in" id="P90" />
+					<label for="P90">P90</label>
+			</div>
+		</div>
+		<div class="col s12 m6 l4">
+
+		</div>
+	</div>
+
+
+	<div class="row champ">
+		<div class="col s12">
+			<p class="bold">Champions :</p>
+		</div>
+		<div class="col s12 m6">
+			<div class="field input-field">
+				<input type="checkbox" id="Lucian" />
+					<label for="Lucian">Lucian</label>
+			</div>
+			<div class="field input-field">
+				<input type="checkbox" id="thresh" />
+					<label for="thresh">thresh</label>
+			</div>
+			<div class="field input-field">
+				<input type="checkbox" id="Braum" />
+					<label for="Braum">Braum</label>
+			</div>
+		</div>
+		<div class="col s12 m6">
+			<div class="field input-field">
+				<input type="checkbox" id="Léona" />
+					<label for="Léona">Léona</label>
+			</div>
+			<div class="field input-field">
+				<input type="checkbox" id="Vayne" />
+					<label for="Vayne">Vayne</label>
+			</div>
+			<div class="field input-field">
+				<input type="checkbox" id="Tamere" />
+					<label for="Tamere">Tamere</label>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col s12">
+			<div class="btnlog actions">
+				<%= button_tag(type: 'submit', class: "btn") do %>
+					Publier <i class='material-icons right'>send</i>
+				<% end %>
+			</div>
+		</div>
+	</div>
+
+
+
+<% end %>
+
+<%= link_to 'Retour', admin_team_members_path %>
 
 <script>
 $(document).ready(function() {
