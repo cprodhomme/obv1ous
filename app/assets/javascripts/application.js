@@ -14,12 +14,12 @@
 //= require jquery_ujs
 //= require_tree .
 //= require materialize-sprockets
-var heigthScreen = $( document ).height();
-var heigthContent = $("body").height();
+
 
 $( document ).ready(function() {
 
-
+    var heigthScreen = $( document ).height();
+    var heigthContent = $("body").height();
 
     if(heigthContent < heigthScreen){
         $(".page-footer").css("position","fixed");
