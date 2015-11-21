@@ -224,6 +224,10 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
 }
 .gallerie{
     margin-top: 20px;
+
+    .material-placeholder{
+        text-align: center;
+    }
 }
 .roulette{
     text-align: center;
