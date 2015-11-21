@@ -254,6 +254,10 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
     .content-roulette{
         min-height:150px;
         margin-top: 20px;
+
+        .title-strat{
+            font-size: 20px;
+        }
     }
 }
 .img-avatar{
