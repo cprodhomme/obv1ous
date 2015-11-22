@@ -15,7 +15,6 @@
 //= require_tree .
 //= require materialize-sprockets
 
-
 $( document ).ready(function() {
 
     var heigthScreen = $( document ).height();
@@ -28,6 +27,24 @@ $( document ).ready(function() {
         $(".page-footer").css("position","relative");
     }
 
-// console.log(heigthContent);
-// console.log(heigthScreen);
+
+var k = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65],
+n = 0;
+$(document).keydown(function (e) {
+    if (e.keyCode === k[n++]) {
+        if (n === k.length) {
+            Materialize.toast('The konami code !!!', 6000);
+            Materialize.toast('You are smart for an human.', 8000);
+            if($(".pseudoNav a").text().length){
+                Materialize.toast('Nice to meet you ' + $(".pseudoNav a").text() + ".", 10000);
+            }
+            n = 0;
+            return false;
+        }
+    }
+    else {
+        n = 0;
+    }
+});
+
 });

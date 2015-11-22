@@ -1,6 +1,17 @@
 <!DOCTYPE html>
+<!--
+             ,
+       .-.___O\
+        'Y     `-.
+        )   ,
+    |`-'  (@    )
+    \_.   `    /'
+   (     >_ .' `\  Obv1ous see you
+    \__//'      '
+-->
 <html>
 <head>
+
     <title>Obv1ous</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <%= stylesheet_link_tag    'application' %>
@@ -30,7 +41,7 @@
                             <li><%= link_to 'Roulette', roulette_index_path %></li>
                             <li class="divider"></li>
                             <% if user_signed_in? %>
-                                <li><a href="#"><%= current_user.username.capitalize %></a></li>
+                                <li><a href=""><%= current_user.username.capitalize %></a></li>
                                 <li><%= link_to 'Déconnexion', destroy_user_session_path, :id => "logout", :method => :delete %><li>
                             <% else %>
                                 <li><%= link_to 'Connexion', new_user_session_path %></li>
@@ -45,7 +56,7 @@
                         </ul>
                         <ul class="right hide-on-med-and-down ">
                             <% if user_signed_in? %>
-                                <li><a href="#"><%= current_user.username.capitalize %></a></li>
+                                <li class="pseudoNav"><a href=""><%= current_user.username.capitalize %></a></li>
                                 <li><%= link_to 'Déconnexion', destroy_user_session_path, :id => "logout", :method => :delete %><li>
                             <% else %>
                                 <li><%= link_to 'Connexion', new_user_session_path %></li>
@@ -95,7 +106,7 @@
       <div class="footer-copyright">
         <div class="container">
         © 2015 Copyright Obv1ous
-        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        <a class="grey-text text-lighten-4 right" target="_blank" href="http://steamcommunity.com/groups/Obv1">Groupe steam</a>
         </div>
       </div>
     </footer>
