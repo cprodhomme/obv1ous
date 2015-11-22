@@ -48,3 +48,16 @@ $(document).keydown(function (e) {
 });
 
 });
+
+
+$( window ).resize(function() {
+    var heigthScreen = $( document ).height();
+    var heigthContent = $("body").height();
+
+    if(heigthContent < heigthScreen){
+        $(".page-footer").css("position","fixed");
+    }
+    else {
+        $(".page-footer").css("position","relative");
+    }
+});
