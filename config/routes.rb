@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'pride/index'
+
   mount Ckeditor::Engine => '/ckeditor'
 
   devise_for :users
@@ -11,6 +13,9 @@ Rails.application.routes.draw do
 
   # show 1 article
   #get '/:id' => 'articles#show'
+
+  match '/contacts',     to: 'contacts#new',             via: 'get'
+  resources "contacts", only: [:new, :create]
 
   resources :articles, only: [:index, :show]
   resources :team, only: [:index, :show]
