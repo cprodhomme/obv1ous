@@ -7,43 +7,105 @@
 
 <style>
 
-html {
-  background: url(https://38.media.tumblr.com/546c0cd48d71f210f9b67a389003790d/tumblr_neq0yw9rMA1tm16jjo1_500.gif) no-repeat center center fixed;
-  background-size: cover;
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #000;
+    }
+
+    .bg-img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url(http://www.reactiongifs.us/wp-content/uploads/2015/04/nothing_to_see_here_naked_gun.gif) no-repeat center center fixed;
+        background-size: cover;
+        background-color: #000;
+        opacity: .5;
+        filter: alpha(opacity=50);
+    }
+
+    .content {
+        font-family: 'Avenir-Next',Avenir,Helvetica,sans-serif;
+        color: #fff;
+        background-color: none;
+        z-index: 2;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        margin-left: 50px;
+    }
+
+    h1 {
+        font-size: 160px;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    h2 {
+        margin-top: 0;
+        max-width: 700px;
+        font-size: 30px;
+        width: 100%;
+    }
+
+    p {
+        text-align: left;
+        padding-bottom: 32px;
+    }
+    a{
+        color:#fff;
+        text-decoration: none;
+    }
+    .btn {
+        display: inline-block;
+        border: 1px solid #aaa;
+        border-radius: 40px;
+        padding: 15px 30px;
+        margin-right: 15px;
+        margin-bottom: 10px;
+    }
+    .btn:hover {
+        color: #e2e2e2;
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+@media only screen and (max-width: 480px) {
+    .btn {
+        background-color: white;
+        color: #444444;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 120px;
+    }
 }
-h1 {
-  font-size: 16em;
-  margin: .2em .5em;
-  color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 0px;
-}
-h2 {
-  font-size: 1.7em;
-  margin: .2em .5em;
-  color: rgba(255, 255, 255, 0.6);
-}
-a {
-  font-size: 1.7em;
-  margin: .2em .5em;
-  color: rgba(255, 255, 255, 0.6);
-  text-decoration: none;
-}
-div.error {
-  position: absolute;
-  top: 30%;
-  margin-top: -8em;
-  width: 100%;
-  text-align: center;
-}
+
 
 </style>
 </head>
 
 <body>
-    <div class="error">
-      <h1>404</h1>
-      <h2>Oh Shit! Page not found =X</h2>
-      <a href="Obvious.fr">Retour</a>
+  <div class='container'>
+    <div class='row content'>
+      <div class='col-lg-12'></div>
+      <div class='col-lg-12'>
+        <h1>404</h1>
+        <h2>Oops, the page you're looking for does not exist.</h2>
+        <p>
+          You may want to head back to the homepage.
+          </br>
+        </p>
+        <a href="#"><span class='btn'>RETURN HOME</span></a>
+        <!-- <a href="#"><span class='btn'>REPORT PROBLEM</span></a> -->
+      </div>
     </div>
+  </div>
+  <div class='bg-img'></div>
+
 </body>
 </html>
