@@ -94,11 +94,11 @@ class Admin::TeamMembersController < Admin::DashboardController
 
 	def new
 		@member = TeamMember.new
-		@member.inspect
-		#@member.team_members_games.build
-		@member_games = TeamMembersGame.new
-		@member_weapons = TeamMembersWeapon.new
-		@member_champions = TeamMembersChampion.new
+		@member.team_members_game.build
+
+		#@member_games = TeamMembersGame.new
+		#@member_weapons = TeamMembersWeapon.new
+		#@member_champions = TeamMembersChampion.new
 
 		#@member_games = @member.team_members_games.build
 		#@member_weapons = @member.team_members_weapons.build
@@ -107,6 +107,7 @@ class Admin::TeamMembersController < Admin::DashboardController
 
 	def create
 	    @member = TeamMember.new(member_params)
+	    #TeamMembersGame.new(member_games_params)
 
 		if @member.save
 			redirect_to edit_admin_team_member_path(@member.id), notice: 'Le membre a bien été creer'
@@ -141,19 +142,19 @@ class Admin::TeamMembersController < Admin::DashboardController
 	private
 
     def member_params
-      	params.require(:team_member).permit(:name, :id_steam, :color, :avatar, :avatar_color, :description, :rank_cs, :rank_lol, :role_cs, :role_lol)
+      	params.require(:team_member).permit(:name, :id_steam, :color, :avatar, :avatar_color, :description, :rank_cs, :rank_lol, :role_cs, :role_lol, team_members_game: [:id, :name_game])
     end
 
-    def member_games
-    	params.require(:team_members_games).permit(:team_members_id, :name_game)
+    def member_games_params
+    	params.require(:team_members_game).permit(:team_member_id, :name_game)
     end
 
-    def member_weapons
-    	params.require(:team_members_weapons).permit(:team_members_id, :name_weapon)
+    def member_weapons_params
+    	params.require(:team_members_weapon).permit(:team_member_id, :name_weapon)
     end
 
-    def member_champions
-    	params.require(:team_members_champions).permit(:team_members_id, :name_champion)
+    def member_champions_params
+    	params.require(:team_members_champion).permit(:team_member_id, :name_champion)
     end
 
 end
