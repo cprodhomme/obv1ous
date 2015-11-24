@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   get 'pride/index'
 
+  get 'pride/index'
+
   mount Ckeditor::Engine => '/ckeditor'
 
   devise_for :users
@@ -21,6 +23,7 @@ Rails.application.routes.draw do
   resources :team, only: [:index, :show]
   resources :gallery, only: [:index]
   resources :roulette, only: [:index]
+  resources :pride, only: [:index]
 
   patch '/roulette/CT' => 'roulette#getCTStat'
   patch '/roulette/T' => 'roulette#getTStat'
