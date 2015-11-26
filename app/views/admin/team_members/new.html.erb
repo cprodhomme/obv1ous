@@ -96,7 +96,7 @@
 		</div>
 		<div class="col s12 m6">
 
-			<%= f.fields_for :team_members_games do |team_members_games_form| %>
+			<%= f.fields_for :team_members_game do |team_members_games_form| %>
 			<div class="field input-field">
         		<%= team_members_games_form.check_box :name_game, {:class => "filled-in"}, true, false %>
         		<%= team_members_games_form.label :name_game, "game" %>
