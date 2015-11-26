@@ -106,14 +106,12 @@ class Admin::TeamMembersController < Admin::DashboardController
 	end
 
 	def create
-	    @member = TeamMember.new(member_params)
-	    #TeamMembersGame.new(member_games_params)
-
-		if @member.save
-			redirect_to edit_admin_team_member_path(@member.id), notice: 'Le membre a bien été creer'
-		else
-			render 'new'
-		end
+		@member = TeamMember.new(team_member_params)
+	    if @member.save
+	        redirect_to edit_admin_team_member_path(@member.id), notice: 'Le membre a bien été creer'
+	    else
+	        render 'new'
+	    end
 	end
 
 	def edit
@@ -145,7 +143,11 @@ class Admin::TeamMembersController < Admin::DashboardController
       	params.require(:team_member).permit(:name, :id_steam, :color, :avatar, :avatar_color, :description, :rank_cs, :rank_lol, :role_cs, :role_lol, team_members_game: [:id, :name_game])
     end
 
-    def member_games_params
+    def team_member_params
+	    params.require(:team_member).permit(:name, :id_steam, :color, :avatar, :avatar_color, :description, :rank_cs, :rank_lol, :role_cs, :role_lol, team_members_game_attributes: [ :id, :team_member_id, :name_game])
+	end
+
+    def team_member_game_params
     	params.require(:team_members_game).permit(:team_member_id, :name_game)
     end
 
