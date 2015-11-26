@@ -2,8 +2,6 @@ Rails.application.routes.draw do
 
   get 'pride/index'
 
-  get 'pride/index'
-
   mount Ckeditor::Engine => '/ckeditor'
 
   devise_for :users
