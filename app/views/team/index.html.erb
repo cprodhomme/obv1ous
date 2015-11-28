@@ -1,69 +1,19 @@
 <div class="row team">
     <div class="col s12 m12 l12">
         <h4>Team Obv1ous</h4>
-
-
         <div class="row">
-        <div class="col s12 m6">
-          <div class="card">
-            <div class="card-color team-green">
-                <%= image_tag('team-ico/green.png', :class => "circle") %>
-            </div>
-            <div class="card-action">
-              <a href="#">Cle</a>
-            </div>
-          </div>
+            <% @team.each do |players| %>
+                <div class="col s12 m6">
+                  <div class="card">
+                    <div class="card-color team-<%= players.color %>">
+                        <%= image_tag("team-ico/#{players.avatar_color}.png", :class => "circle") %>
+                    </div>
+                    <div class="card-action">
+                        <%= link_to players.name , team_path(players.id) %>
+                    </div>
+                  </div>
+                </div>
+            <% end %>
         </div>
-        <div class="col s12 m6">
-          <div class="card">
-            <div class="card-color team-blue">
-                <%= image_tag('team-ico/blue.png', :class => "circle") %>
-            </div>
-            <div class="card-action">
-              <a href="#">Sweubi</a>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 m6">
-          <div class="card">
-            <div class="card-color team-orange">
-                <%= image_tag('team-ico/orange.png', :class => "circle") %>
-            </div>
-            <div class="card-action">
-              <a href="#">Gaviil</a>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 m6">
-          <div class="card">
-            <div class="card-color team-yellow">
-                <%= image_tag('team-ico/red.png', :class => "circle") %>
-            </div>
-            <div class="card-action">
-              <a href="#">Deadpool</a>
-            </div>
-          </div>
-        </div>
-        <!-- <div class="col s12 m6">
-          <div class="card">
-            <div class="card-color team-purple">
-                <img src="/assets/logo-trans-259a02ab86f263dfbb4afe0771098a4809281bf7233c016745c39b5ba46b0235.png" class="circle" alt="" />
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-            </div>
-          </div>
-        </div> -->
-        <div class="col s12 m6">
-          <div class="card">
-            <div class="card-color team-yellow">
-                <%= image_tag('team-ico/yellow.png', :class => "circle") %>
-            </div>
-            <div class="card-action">
-              <a href="#">Hareen</a>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
 </div>

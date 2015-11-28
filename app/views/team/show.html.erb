@@ -6,9 +6,7 @@
                 </div>
                 <span>Pseudo</span>
                 <p class="descri">
-                    Sed si ille hac tam eximia fortuna propter utilitatem rei publicae frui non properat, ut omnia illa conficiat, quid ego, senator, facere debeo, quem, etiamsi ille aliud vellet, rei publicae consulere oporteret?
-                    Sed cautela nimia in peiores haeserat plagas, ut narrabimus postea, aemulis consarcinantibus insidias graves apud Constantium, cetera medium principem sed siquid auribus eius huius modi quivis infudisset ignotus, acerbum et inplacabilem et in hoc causarum titulo dissimilem sui.
-                    Eminuit autem inter humilia supergressa iam impotentia fines mediocrium delictorum nefanda Clematii cuiusdam Alexandrini nobilis mors repentina; cuius socrus cum misceri sibi generum, flagrans eius amore, non impetraret, ut ferebatur, per palatii pseudothyrum introducta, oblato pretioso reginae monili id adsecuta est, ut ad Honoratum tum comitem orientis formula missa letali omnino scelere nullo contactus idem Clematius nec hiscere nec loqui permissus occideretur.
+                    <%= @member.description %>
                 </p>
 
                 <div class="row">
@@ -51,10 +49,10 @@
                        </thead>
                        <tbody>
                             <tr>
-                                <td>Counter Strike </td><td> Sheriff</td>
+                                <td>Counter Strike </td><td><%= @member.rank_cs %></td>
                             </tr>
                             <tr>
-                                <td>League of legends</td><td>GOLD</td>
+                                <td>League of legends</td><td><%= @member.rank_lol %></td>
                             </tr>
                         </tbody>
                         </table>
@@ -69,10 +67,10 @@
                        </thead>
                        <tbody>
                             <tr>
-                                <td>Counter Strike </td><td>Open frag(rifle)</td>
+                                <td>Counter Strike </td><td><%= @member.role_cs %></td>
                             </tr>
                             <tr>
-                                <td>League of legends</td><td>Support</td>
+                                <td>League of legends</td><td><%= @member.role_lol %></td>
                             </tr>
                         </tbody>
                         </table>
