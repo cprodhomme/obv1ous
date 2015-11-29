@@ -2,9 +2,9 @@
     <div class="col s12 m12 l12">
             <div class="showPlayer">
                 <div class="picture">
-                    <img class="circle" src="https://yt3.ggpht.com/-uRtkLFWJv-A/AAAAAAAAAAI/AAAAAAAAAAA/UCwptM94vtQ/s100-c-k-no/photo.jpg" alt="" />
+                    <%= image_tag("team-ico/#{@member.avatar_color}.png", :class => "circle") %>
                 </div>
-                <span>Pseudo</span>
+                <span><%= @member.name %></span>
                 <p class="descri">
                     <%= @member.description %>
                 </p>
