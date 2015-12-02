@@ -19,24 +19,11 @@
                 </div>
                 <div id="showPlayer1" class="col s12 infojoueur">
                     <div class="games">
-                        <div class="col l4 m6 s12">
-                            <%= image_tag('games/lol.png') %>
-                        </div>
-                        <div class="col l4 m6 s12">
-                            <%= image_tag('games/csgo.png') %>
-                        </div>
-                        <div class="col l4 m6 s12">
-                            <%= image_tag('games/rocket.png') %>
-                        </div>
-                        <div class="col l4 m6 s12">
-                            <%= image_tag('games/block.png') %>
-                        </div>
-                        <div class="col l4 m6 s12">
-                            <%= image_tag('games/rust.png') %>
-                        </div>
-                        <div class="col l4 m6 s12">
-                            <%= image_tag('games/minecraft.png') %>
-                        </div>
+                        <% @games.each do |game| %>
+                            <div class="col l4 m6 s12">
+                                <%= image_tag("games/#{game.name_game}.png") %>
+                            </div>
+                        <% end %>
                     </div>
                 </div>
                 <div id="showPlayer2" class="col s12 infojoueur">
@@ -51,9 +38,11 @@
                             <tr>
                                 <td>Counter Strike </td><td><%= @member.rank_cs %></td>
                             </tr>
+                            <% if @member.rank_lol %>
                             <tr>
                                 <td>League of legends</td><td><%= @member.rank_lol %></td>
                             </tr>
+                            <% end %>
                         </tbody>
                         </table>
                     </div>
@@ -69,9 +58,11 @@
                             <tr>
                                 <td>Counter Strike </td><td><%= @member.role_cs %></td>
                             </tr>
+                            <% if @member.role_lol %>
                             <tr>
                                 <td>League of legends</td><td><%= @member.role_lol %></td>
                             </tr>
+                            <% end %>
                         </tbody>
                         </table>
                     </div>
@@ -86,14 +77,15 @@
                        </thead>
                        <tbody>
                             <tr>
-                                <td><%= image_tag('weapon/AK-47.png') %></td>
-                                <td><%= image_tag('weapon/Five-SeveN.png') %></td>
-                                <td><%= image_tag('weapon/M4A1-S.png') %></td>
+                                <% @weapons.each do |weapon| %>
+                                    <td><%= image_tag("weapon/#{weapon.name_weapon}.png") %></td>
+                                <% end %>
                             </tr>
                         </tbody>
                         </table>
                     </div>
 
+                    <% if @champions %>
                     <div class="col s12 m6 nopad">
                         <table>
                         <thead>
@@ -103,14 +95,15 @@
                        </thead>
                        <tbody>
                             <tr>
-                                <td><%= image_tag('champion/ThreshPortrait.png') %></td>
-                                <td><%= image_tag('champion/BraumPortrait.png') %></td>
-                                <td><%= image_tag('champion/Tahm_KenchPortrait.png') %></td>
+                                <% @champions.each do |champion| %>
+                                    <td><%= image_tag("champion/#{champion.name_champion}.png") %></td>
+                                <% end %>
                             </tr>
 
                         </tbody>
                         </table>
                     </div>
+                    <% end %>
 
 
                 </div>
