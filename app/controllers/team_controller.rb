@@ -1,7 +1,7 @@
 class TeamController < ApplicationController
 
     def index
-    	@team = TeamMember.order('id desc')
+    	@team = TeamMember.order('id asc')
     end
 
     def show
