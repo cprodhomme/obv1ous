@@ -1,4 +1,4 @@
-# obv1ous
+# Obv1ous
 
 Obvious est un site communautaire pour une team e-sport de gaming sur Counter strike : Global offensive
 
@@ -7,7 +7,8 @@ Obvious est un site communautaire pour une team e-sport de gaming sur Counter st
 - Cle61  - https://github.com/Cle61
 - Gaviil - https://github.com/Gaviil
 
-**Lien du site :**
+
+##Lien du site :
 - http://obv1ous.fr
 
 
