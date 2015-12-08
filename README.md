@@ -1,29 +1,26 @@
 # obv1ous
 
-**Contributeurs :**
+Obvious est un site communautaire pour une team e-sport de gaming sur Counter strike : Global offensive
+
+
+##Contributeurs :
 - Cle61  - https://github.com/Cle61
 - Gaviil - https://github.com/Gaviil
 
 **Lien du site :**
-- http://obv1ous.fr ?
+- http://obv1ous.fr
 
-**Ajouter :**
 
-Ajouter une page contact
-
-Team : couleur / arme favorite / Jeux / rang actuel
-
-**Screenshot :**
-
+##Screenshot
 
 Accueil
 
-![alt tag](http://quentinboussard.fr/img/folio/full/Obv-1.png)
+![alt tag](http://quentinboussard.fr/img/folio/full/obv/obv-team2.png)
 
 
 Back-Office
 
-![alt tag](http://quentinboussard.fr/img/folio/full/Obv-2.png)
+![alt tag](http://quentinboussard.fr/img/folio/full/obv/obv_admin.png)
 
 <!-- **à faire au démarrage de la plateforme :**
 - [app/models/user.rb] - mettre le champ "admin" à false par défaut
