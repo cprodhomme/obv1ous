@@ -15,7 +15,7 @@ Obvious est un site communautaire pour une team e-sport de gaming sur Counter st
 
 Accueil
 
-![alt tag](http://quentinboussard.fr/img/folio/full/obv/obv-team2.png)
+![alt tag](http://quentinboussard.fr/img/folio/full/obv/obv-team2.jpg)
 
 
 Back-Office
