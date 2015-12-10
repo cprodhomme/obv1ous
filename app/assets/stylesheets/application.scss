@@ -29,14 +29,8 @@
 
 body{
     background: #eceff1;
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
   }
 
-  main {
-    flex: 1 0 auto;
-  }
 
 /*********************
      H E A D E R
@@ -112,6 +106,7 @@ header{
     background:#DB8A8A;
     right: 0;
     left: 0;
+    bottom: 0;
 }
 .waves-button-input{
     border:none;
