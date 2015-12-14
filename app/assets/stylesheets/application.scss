@@ -31,7 +31,26 @@ body{
     background: #eceff1;
   }
 
-
+  html, body {
+    height: 100%;
+  }
+  .showPlayer{
+    min-height: 100%;
+    /* equal to footer height */
+    margin-bottom: -155px;
+  }
+  .page-footer, .showPlayer:after {
+  height: 155px;
+}
+  .page-footer:after {
+    content: "";
+    display: block;
+  }
+.page-footer{
+        .footer-copyright{
+            background-color: #0681C5 !important;
+        }
+}
 /*********************
      H E A D E R
 **********************/
@@ -104,9 +123,9 @@ header{
 }
 .page-footer{
     background:#DB8A8A;
-    right: 0;
-    left: 0;
-    bottom: 0;
+    // right: 0;
+    // left: 0;
+    // bottom: 0;
 }
 .waves-button-input{
     border:none;
