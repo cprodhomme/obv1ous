@@ -38,7 +38,7 @@
                             <tr>
                                 <td>Counter Strike </td><td><%= @member.rank_cs %></td>
                             </tr>
-                            <% if @member.rank_lol %>
+                            <% if @member.rank_lol != "" %>
                             <tr>
                                 <td>League of legends</td><td><%= @member.rank_lol %></td>
                             </tr>
@@ -58,7 +58,7 @@
                             <tr>
                                 <td>Counter Strike </td><td><%= @member.role_cs %></td>
                             </tr>
-                            <% if @member.role_lol %>
+                            <% if @member.role_lol != "" %>
                             <tr>
                                 <td>League of legends</td><td><%= @member.role_lol %></td>
                             </tr>

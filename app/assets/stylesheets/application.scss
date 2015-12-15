@@ -37,15 +37,20 @@ body{
   .showPlayer{
     min-height: 100%;
     /* equal to footer height */
-    margin-bottom: -201px;
+    margin-bottom: -155px;
   }
   .page-footer, .showPlayer:after {
-  height: 201px;
+  height: 155px;
 }
   .page-footer:after {
     content: "";
     display: block;
   }
+
+  .footer-copyright{
+      background-color: #0681C5 !important;
+  }
+
 
 /*********************
      H E A D E R
