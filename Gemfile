@@ -69,3 +69,5 @@ group :development, :test do
   # Use Rspec Rails
   gem 'rspec-rails', '~> 3.0'
 end
+
+gem 'unicorn'

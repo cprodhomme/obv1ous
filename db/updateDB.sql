@@ -1,4 +1,4 @@
-USE obv1ous_development;
+USE obv1ous_production;
 
 -- admin
 UPDATE users SET admin = 1 WHERE username = "Gaviil";
