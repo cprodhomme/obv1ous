@@ -97,6 +97,15 @@ header{
 .content{
     // background: #fff;
 
+    .card-title{
+        padding-left: 0px !important;
+
+        a{
+            padding: 17px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+        }
+    }
     .TwitchIndex{
         text-align: center;
         margin-top: 10px;
