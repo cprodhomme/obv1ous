@@ -105,10 +105,11 @@ header{
     .card-title{
         padding-left: 0px !important;
         // background-color: rgba(0, 0, 0, 0.7);
-        background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.9));
+        background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9));
         width: 100%;
-        bottom:7px !important;
+        bottom:6px !important;
         padding: 10px !important;
+        padding-top: 40px !important;
 
         a{
             padding: 10px;
@@ -187,6 +188,7 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
         background-color: #fff;
         min-height: 80px;
         border-top: 1px solid #e5e5e5;
+        margin-top:-7px;
 
         h4{
             font-size: 25px;
