@@ -177,6 +177,12 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
     .content-news{
         background-color: #fff;
         min-height: 80px;
+        border-top: 1px solid #e5e5e5;
+
+        h4{
+            font-size: 25px;
+            color: #0288d1;
+        }
     }
 }
 .team{
