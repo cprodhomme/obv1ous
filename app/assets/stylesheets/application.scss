@@ -104,10 +104,14 @@ header{
 
     .card-title{
         padding-left: 0px !important;
+        // background-color: rgba(0, 0, 0, 0.7);
+        background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.9));
+        width: 100%;
+        bottom:7px !important;
+        padding: 10px !important;
 
         a{
-            padding: 17px;
-            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
             color: #fff;
         }
     }
