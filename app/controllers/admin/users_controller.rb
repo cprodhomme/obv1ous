@@ -12,7 +12,7 @@ class Admin::UsersController < Admin::DashboardController
 	    @user = User.new(new_params)
 
 		if @user.save
-			redirect_to edit_admin_article_path(@user.id), notice: 'Votre article a bien été creer'
+			redirect_to edit_admin_article_path(@user.id), notice: 'Votre article a bien été créé'
 		else
 			render 'new'
 		end
@@ -27,7 +27,7 @@ class Admin::UsersController < Admin::DashboardController
 
 	    if @user.update_attributes(new_params)
 	      # Handle a successful update.
-	      redirect_to edit_admin_article_path(@user.id), notice: 'Utilisateur a bien été modifier'
+	      redirect_to edit_admin_article_path(@user.id), notice: 'Utilisateur a bien été modifié'
 	    else
 	      render 'edit'
 	    end
@@ -35,7 +35,7 @@ class Admin::UsersController < Admin::DashboardController
 
 	def destroy
 		User.destroy(params[:id])
-		redirect_to admin_articles_path, notice: 'Utilisateur a bien ete supprimer'
+		redirect_to admin_articles_path, notice: 'Utilisateur a bien été supprimé'
 	end
 
 	private
