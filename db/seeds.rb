@@ -7,15 +7,53 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 teamMemberData = [
-{name: 'Gaviil', color: 'orange', avatar_color: 'orange', description: 'Pizza <3', rank_cs: 'Distinguished Master Guardian', rank_lol: 'Gold 5', role_cs: 'Open Frag', role_lol: 'Support'}, 
-{name: 'Cle61', color: 'green', avatar_color: 'green', description: '', rank_cs: 'Distinguished Master Guardian', rank_lol: '', role_cs: 'Support', role_lol: ''},
-{name: 'Sweubi', color: 'blue', avatar_color: 'blue', description: '', rank_cs: 'Distinguished Master Guardian', rank_lol: 'Platine 4', role_cs: 'Open frag', role_lol: 'ADC'}
+{name: 'Gaviil', color: 'orange', avatar_color: 'orange', description: 'Moi ça va, si j\'écoute pas les voix qui me parle.<br>Ps: TA RACE', rank_cs: 'Master Guardian 1', rank_lol: 'Gold 5', role_cs: 'Open Frag', role_lol: 'Support'}, 
+{name: 'Cle61', color: 'green', avatar_color: 'green', description: ' ', rank_cs: 'Master Guardian 1', rank_lol: '', role_cs: 'Support', role_lol: ''},
+{name: 'Sweubi', color: 'blue', avatar_color: 'blue', description: 'ave caesar morituri te salutant', rank_cs: 'Master Guardian 1', rank_lol: 'Platine 4', role_cs: 'Open frag', role_lol: 'ADC'},
+{name: 'Haareen', color: 'yellow', avatar_color: 'yellow', description: ' ', rank_cs: 'Gold Nova 3', rank_lol: '', role_cs: 'Support', role_lol: ''},
+{name: 'Rom', color: 'purple', avatar_color: 'pink', description: ' ', rank_cs: 'Gold Nova 1', rank_lol: '', role_cs: 'Support', role_lol: ''}
+]
+
+teamMemberGamesData = [
+{team_member_id: 1, name_game: 'csgo'},
+{team_member_id: 2, name_game: 'csgo'},
+{team_member_id: 3, name_game: 'csgo'},
+{team_member_id: 4, name_game: 'csgo'},
+{team_member_id: 5, name_game: 'csgo'},
+{team_member_id: 1, name_game: 'lol'},
+{team_member_id: 3, name_game: 'lol'},
+{team_member_id: 4, name_game: 'lol'},
+{team_member_id: 1, name_game: 'block'},
+{team_member_id: 2, name_game: 'block'},
+{team_member_id: 1, name_game: 'rocket'},
+{team_member_id: 2, name_game: 'rocket'},
+{team_member_id: 3, name_game: 'rocket'},
+{team_member_id: 4, name_game: 'rocket'},
+{team_member_id: 1, name_game: 'minecraft'},
+{team_member_id: 2, name_game: 'minecraft'},
+{team_member_id: 3, name_game: 'minecraft'},
+{team_member_id: 4, name_game: 'minecraft'},
+{team_member_id: 5, name_game: 'minecraft'},
+{team_member_id: 1, name_game: 'rust'},
+{team_member_id: 2, name_game: 'rust'}
+]
+
+teamMemberWeaponsData = [
+{team_member_id: 1, name_weapon: 'AK-47'},
+{team_member_id: 1, name_weapon: 'AWP'},
+{team_member_id: 1, name_weapon: 'Desert_Eagle'},
+{team_member_id: 2, name_weapon: 'AK-47'},
+{team_member_id: 2, name_weapon: 'M4A4'},
+{team_member_id: 2, name_weapon: 'AWP'},
+{team_member_id: 3, name_weapon: 'M4A4'},
+{team_member_id: 3, name_weapon: 'P90'},
+{team_member_id: 3, name_weapon: 'XM1014'}
 ]
 
 if TeamMember.count == 0
 	teamMember = TeamMember.create!(teamMemberData)
-	#teamMember.team_members_game.create!()
-	#teamMember.team_members_weapon.create!()
+	TeamMembersGame.create!(teamMemberGamesData)
+	TeamMembersWeapon.create!(teamMemberWeaponsData)
 	puts '-> Ajoût des membres de l\'équipe'
 else
 	# mettre à jour la data

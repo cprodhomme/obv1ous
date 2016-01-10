@@ -7,7 +7,7 @@
                 </div>
                 <span><%= @member.name %></span>
                 <p class="descri">
-                    <%= @member.description %>
+                    <%= @member.description.html_safe %>
                 </p>
 
                 <div class="row">
