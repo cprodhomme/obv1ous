@@ -50,6 +50,11 @@ body{
   .footer-copyright{
       background-color: #0681C5 !important;
   }
+  .foot2{
+      ul{
+          font-size: 11px;
+      }
+  }
 
 
 /*********************
@@ -97,6 +102,20 @@ header{
 .content{
     // background: #fff;
 
+    .card-title{
+        padding-left: 0px !important;
+        // background-color: rgba(0, 0, 0, 0.7);
+        background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9));
+        width: 100%;
+        bottom:6px !important;
+        padding: 10px !important;
+        padding-top: 40px !important;
+
+        a{
+            padding: 10px;
+            color: #fff;
+        }
+    }
     .TwitchIndex{
         text-align: center;
         margin-top: 10px;
@@ -168,6 +187,13 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
     .content-news{
         background-color: #fff;
         min-height: 80px;
+        border-top: 1px solid #e5e5e5;
+        margin-top:-7px;
+
+        h4{
+            font-size: 25px;
+            color: #0288d1;
+        }
     }
 }
 .team{

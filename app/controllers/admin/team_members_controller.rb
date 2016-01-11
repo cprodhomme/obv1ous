@@ -108,7 +108,7 @@ class Admin::TeamMembersController < Admin::DashboardController
 	def create
 		@member = TeamMember.new(team_member_params)
 	    if @member.save
-	        redirect_to edit_admin_team_member_path(@member.id), notice: 'Le membre a bien été creer'
+	        redirect_to edit_admin_team_member_path(@member.id), notice: 'Le membre a bien été créé'
 	    else
 	        render 'new'
 	    end
@@ -126,7 +126,7 @@ class Admin::TeamMembersController < Admin::DashboardController
 
 	    if @member.update_attributes(member_params)
 	      # Handle a successful update.
-	      redirect_to edit_admin_team_member_path(@member.id), notice: 'Le membre a bien été modifier'
+	      redirect_to edit_admin_team_member_path(@member.id), notice: 'Le membre a bien été modifié'
 	    else
 	      render 'edit'
 	    end
@@ -134,7 +134,7 @@ class Admin::TeamMembersController < Admin::DashboardController
 
 	def destroy
 		TeamMember.destroy(params[:id])
-		redirect_to admin_team_members_path, notice: 'Le membre a bien ete supprimer'
+		redirect_to admin_team_members_path, notice: 'Le membre a bien été supprimé'
 	end
 
 	private

@@ -12,7 +12,7 @@ class Admin::ArticlesController < Admin::DashboardController
 	    @new = News.new(new_params)
 
 		if @new.save
-			redirect_to edit_admin_article_path(@new.id), notice: 'Votre article a bien été creer'
+			redirect_to edit_admin_article_path(@new.id), notice: 'Votre article a bien été créé'
 		else
 			render 'new'
 		end
@@ -27,7 +27,7 @@ class Admin::ArticlesController < Admin::DashboardController
 
 	    if @new.update_attributes(new_params)
 	      # Handle a successful update.
-	      redirect_to edit_admin_article_path(@new.id), notice: 'Votre article a bien été modifier'
+	      redirect_to edit_admin_article_path(@new.id), notice: 'Votre article a bien été modifié'
 	    else
 	      render 'edit'
 	    end
@@ -35,7 +35,7 @@ class Admin::ArticlesController < Admin::DashboardController
 
 	def destroy
 		News.destroy(params[:id])
-		redirect_to admin_articles_path, notice: 'Votre article a bien ete supprimer'
+		redirect_to admin_articles_path, notice: 'Votre article a bien été supprimé'
 	end
 
 	private

@@ -9,7 +9,7 @@
                     <%= image_tag("news4.png") %>
                     gg
                   <% end %>
-                  <span class="card-title"><%= link_to new.title, article_path(new.id) %></span>
+                  <span class="card-title"><%= link_to new.title.capitalize, article_path(new.id) %></span>
                 </div>
                 <div class="card-content">
                   <p><%= new.summary.html_safe %></p>
