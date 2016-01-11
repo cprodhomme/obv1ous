@@ -32,42 +32,20 @@
                         <table>
                         <thead>
                              <tr>
-                                 <th>Grade</th>
+                                 <th>Infos Perso</th>
                              </tr>
                        </thead>
                        <tbody>
                             <tr>
-                                <td>Counter Strike </td><td><%= @member.rank_cs %></td>
+                                <td>Grade</td><td><%= @member.rank_cs %></td>
                             </tr>
-                            <% if @member.rank_lol != "" %>
                             <tr>
-                                <td>League of legends</td><td><%= @member.rank_lol %></td>
+                                <td>Role</td><td><%= @member.role_cs %></td>
                             </tr>
-                            <% end %>
+
                         </tbody>
                         </table>
                     </div>
-
-                    <div class="col s12 m6">
-                        <table>
-                        <thead>
-                             <tr>
-                                 <th>Role</th>
-                             </tr>
-                       </thead>
-                       <tbody>
-                            <tr>
-                                <td>Counter Strike </td><td><%= @member.role_cs %></td>
-                            </tr>
-                            <% if @member.role_lol != "" %>
-                            <tr>
-                                <td>League of legends</td><td><%= @member.role_lol %></td>
-                            </tr>
-                            <% end %>
-                        </tbody>
-                        </table>
-                    </div>
-
 
                     <div class="col s12 m6 nopad">
                         <table>
@@ -85,26 +63,6 @@
                         </tbody>
                         </table>
                     </div>
-                    <% if !@champions.none %>
-                    <div class="col s12 m6 nopad">
-                        <table>
-                        <thead>
-                             <tr>
-                                 <th>Champions</th>
-                             </tr>
-                       </thead>
-                       <tbody>
-                            <tr>
-                                <% @champions.each do |champion| %>
-                                    <td><%= image_tag("champion/#{champion.name_champion}.png") %></td>
-                                <% end %>
-                            </tr>
-
-                        </tbody>
-                        </table>
-                    </div>
-                    <% end %>
-
 
                 </div>
                 <div id="showPlayer3" class="col s12 infojoueur">disabled</div>
