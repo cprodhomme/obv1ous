@@ -61,10 +61,11 @@ else
 end
 
 # Import des strats roulettes
+Roulette.destroy_all
 if Roulette.count == 0
 	require 'csv'
 
-	CSV.foreach(Rails.root + 'db/fichier.csv', headers: true) do |row|
+	CSV.foreach(Rails.root + 'db/stratroulettes.csv', headers: true) do |row|
 		strats_hash = row.to_hash
 
 		if strats_hash['CT'] == 'X'
