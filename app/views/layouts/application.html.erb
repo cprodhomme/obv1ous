@@ -39,7 +39,7 @@
     <meta name="msapplication-TileImage" content="<%= image_url '/mstile-144x144.png' %>">
     <meta name="theme-color" content="#ffffff">
 
-    
+
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -51,110 +51,111 @@
     </script>
 </head>
 <body>
-    <header>
-        <div class="header-background" id="port">
-            <div class="logo_obv">
-                <%= image_tag('logo-trans.png', class: 'menu_icon') %>
-            </div>
-        </div>
-
-        <!-- Dropdown Structure -->
-        <nav>
-            <div class="container">
-                <div class="row">
-
-                    <div class="nav-wrapper col s12">
-                        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                        <ul class="side-nav" id="mobile-demo">
-                            <li><%= link_to 'Accueil', root_path %></li>
-                            <li><%= link_to 'Team', team_index_path %></li>
-                            <li><%= link_to 'Galerie', gallery_index_path %></li>
-                            <li><%= link_to 'Roulette', roulette_index_path %></li>
-                            <li class="divider"></li>
-                            <% if user_signed_in? %>
-                                <li>
-                                    <% if current_user.admin %>
-                                        <%= link_to current_user.username.capitalize, admin_path %>
-                                    <% else %>
-                                        <a href=""><%= current_user.username.capitalize %></a>
-                                    <% end %>
-                                </li>
-                                <li><%= link_to 'Déconnexion', destroy_user_session_path, :id => "logout", :method => :delete %><li>
-                            <% else %>
-                                <li><%= link_to 'Connexion', new_user_session_path %></li>
-                                <li><%= link_to 'Inscription', new_user_registration_path %></li>
-                            <% end %>
-                        </ul>
-                        <ul class="left hide-on-med-and-down">
-                            <li><%= link_to 'Accueil', root_path %><li>
-                            <li><%= link_to 'Team', team_index_path %></li>
-                            <li><%= link_to 'Galerie', gallery_index_path %></li>
-                            <li><%= link_to 'Roulette', roulette_index_path %></li>
-                        </ul>
-                        <ul class="right hide-on-med-and-down ">
-                            <% if user_signed_in? %>
-                                <li class="pseudoNav">
-                                    <% if current_user.admin %>
-                                        <%= link_to current_user.username.capitalize, admin_path %>
-                                    <% else %>
-                                        <a href=""><%= current_user.username.capitalize %></a>
-                                    <% end %>
-                                </li>
-                                <li><%= link_to 'Déconnexion', destroy_user_session_path, :id => "logout", :method => :delete %><li>
-                            <% else %>
-                                <li><%= link_to 'Connexion', new_user_session_path %></li>
-                                <li><%= link_to 'Inscription', new_user_registration_path %></li>
-                            <% end %>
-                        </ul>
-                    </div>
+    <main>
+        <header>
+            <div class="header-background" id="port">
+                <div class="logo_obv">
+                    <%= image_tag('logo-trans.png', class: 'menu_icon') %>
                 </div>
             </div>
-        </nav>
-    </header>
 
-    <div class="container content">
-        <% if notice %>
-            <script type="text/javascript">
-            $( document ).ready(function() {
-                Materialize.toast('<%= notice %>', 4000);
-            });
-            </script>
-        <% end %>
-        <% if alert %>
-            <script type="text/javascript">
-            $( document ).ready(function() {
-                Materialize.toast('<%= alert %>', 4000);
-            });
-            </script>
-        <% end %>
+            <!-- Dropdown Structure -->
+            <nav>
+                <div class="container">
+                    <div class="row">
 
-        <%= yield %>
-    </div>
+                        <div class="nav-wrapper col s12">
+                            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                            <ul class="side-nav" id="mobile-demo">
+                                <li><%= link_to 'Accueil', root_path %></li>
+                                <li><%= link_to 'Team', team_index_path %></li>
+                                <li><%= link_to 'Galerie', gallery_index_path %></li>
+                                <li><%= link_to 'Roulette', roulette_index_path %></li>
+                                <li class="divider"></li>
+                                <% if user_signed_in? %>
+                                    <li>
+                                        <% if current_user.admin %>
+                                            <%= link_to current_user.username.capitalize, admin_path %>
+                                        <% else %>
+                                            <a href=""><%= current_user.username.capitalize %></a>
+                                        <% end %>
+                                    </li>
+                                    <li><%= link_to 'Déconnexion', destroy_user_session_path, :id => "logout", :method => :delete %><li>
+                                <% else %>
+                                    <li><%= link_to 'Connexion', new_user_session_path %></li>
+                                    <li><%= link_to 'Inscription', new_user_registration_path %></li>
+                                <% end %>
+                            </ul>
+                            <ul class="left hide-on-med-and-down">
+                                <li><%= link_to 'Accueil', root_path %><li>
+                                <li><%= link_to 'Team', team_index_path %></li>
+                                <li><%= link_to 'Galerie', gallery_index_path %></li>
+                                <li><%= link_to 'Roulette', roulette_index_path %></li>
+                            </ul>
+                            <ul class="right hide-on-med-and-down ">
+                                <% if user_signed_in? %>
+                                    <li class="pseudoNav">
+                                        <% if current_user.admin %>
+                                            <%= link_to current_user.username.capitalize, admin_path %>
+                                        <% else %>
+                                            <a href=""><%= current_user.username.capitalize %></a>
+                                        <% end %>
+                                    </li>
+                                    <li><%= link_to 'Déconnexion', destroy_user_session_path, :id => "logout", :method => :delete %><li>
+                                <% else %>
+                                    <li><%= link_to 'Connexion', new_user_session_path %></li>
+                                    <li><%= link_to 'Inscription', new_user_registration_path %></li>
+                                <% end %>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
 
+        <div class="container content">
+            <% if notice %>
+                <script type="text/javascript">
+                $( document ).ready(function() {
+                    Materialize.toast('<%= notice %>', 4000);
+                });
+                </script>
+            <% end %>
+            <% if alert %>
+                <script type="text/javascript">
+                $( document ).ready(function() {
+                    Materialize.toast('<%= alert %>', 4000);
+                });
+                </script>
+            <% end %>
+
+            <%= yield %>
+        </div>
+    </main>
     <footer class="page-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <h5 class="white-text">À propos</h5>
-            <p class="grey-text text-lighten-4">Obv1ous est une équipe E-sport amateur, principalement sur Counter Strike - Global Offensive.</p>
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">À propos</h5>
+                <p class="grey-text text-lighten-4">Obv1ous est une équipe E-sport amateur, principalement sur Counter Strike - Global Offensive.</p>
+              </div>
+              <div class="col l4 offset-l2 s12 foot2">
+                <h5 class="white-text">Notre partenaire :</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" rel="nofollow">62.210.207.131:27016 - Deathmatch</a></li>
+                  <li><a class="grey-text text-lighten-3" rel="nofollow">62.210.207.131:27017 - ONLY PISTOLS Deathmatch</a></li>
+                  <li><a class="grey-text text-lighten-3" rel="nofollow">62.210.207.131:27018 - Deathmatch HSMOD</a></li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="col l4 offset-l2 s12 foot2">
-            <h5 class="white-text">Notre partenaire :</h5>
-            <ul>
-              <li><a class="grey-text text-lighten-3" rel="nofollow">62.210.207.131:27016 - Deathmatch</a></li>
-              <li><a class="grey-text text-lighten-3" rel="nofollow">62.210.207.131:27017 - ONLY PISTOLS Deathmatch</a></li>
-              <li><a class="grey-text text-lighten-3" rel="nofollow">62.210.207.131:27018 - Deathmatch HSMOD</a></li>
-            </ul>
+          <div class="footer-copyright">
+            <div class="container">
+                <span>© 2016 Copyright Obv1ous</span>
+                <a class="grey-text text-lighten-4 right" target="_blank" href="">Nous contacter</a>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="footer-copyright">
-        <div class="container">
-        © 2015 Copyright Obv1ous
-        <!-- <a class="grey-text text-lighten-4 right" target="_blank" href="">Nous contacter</a> -->
-        </div>
-      </div>
-    </footer>
+        </footer>
 
     <script>
         jQuery(document).ready(function(){

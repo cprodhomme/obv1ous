@@ -26,6 +26,18 @@
     font-weight: bold;
 }
 
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+footer.page-footer{
+    padding-top:0px;
+}
 
 body{
     background: #eceff1;
@@ -36,20 +48,8 @@ body{
   }
   .showPlayer{
     min-height: 100%;
-    /* equal to footer height */
-    margin-bottom: -155px;
-  }
-  .page-footer, .showPlayer:after {
-  height: 155px;
-}
-  .page-footer:after {
-    content: "";
-    display: block;
   }
 
-  .footer-copyright{
-      background-color: #0681C5 !important;
-  }
   .foot2{
       ul{
           font-size: 11px;
@@ -141,12 +141,7 @@ header{
         margin-top: 20px;
     }
 }
-.page-footer{
-    background:#DB8A8A;
-    // right: 0;
-    // left: 0;
-    // bottom: 0;
-}
+
 .waves-button-input{
     border:none;
     background-color: #0288d1;
