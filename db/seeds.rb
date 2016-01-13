@@ -42,12 +42,12 @@ teamMemberWeaponsData = [
 {team_member_id: 1, name_weapon: 'AK-47'},
 {team_member_id: 1, name_weapon: 'AWP'},
 {team_member_id: 1, name_weapon: 'Desert_Eagle'},
-{team_member_id: 2, name_weapon: 'AK-47'},
 {team_member_id: 2, name_weapon: 'M4A4'},
-{team_member_id: 2, name_weapon: 'AWP'},
+{team_member_id: 2, name_weapon: 'P90'},
+{team_member_id: 2, name_weapon: 'XM1014'},
+{team_member_id: 3, name_weapon: 'AK-47'},
 {team_member_id: 3, name_weapon: 'M4A4'},
-{team_member_id: 3, name_weapon: 'P90'},
-{team_member_id: 3, name_weapon: 'XM1014'}
+{team_member_id: 3, name_weapon: 'AWP'}
 ]
 
 if TeamMember.count == 0
