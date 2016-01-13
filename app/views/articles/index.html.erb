@@ -7,6 +7,8 @@
                     <%= image_tag(new.image) %>
                     <div class="caption left-align">
                         <%= link_to ('<h5 class="light grey-text text-lighten-3">' + new.title.capitalize + '</h5>').html_safe, article_path(new.id) %>
+                        <!-- <%= link_to ('<h5 class="light grey-text text-lighten-3">' + new.summary + '</h5>').html_safe, article_path(new.id) %> -->
+
                     </div>
                 </li>
             <% end %>
