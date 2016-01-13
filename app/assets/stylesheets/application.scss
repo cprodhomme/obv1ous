@@ -332,9 +332,11 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
     margin-top: 10px;
 
     .slides{
-        height:180px !important;
+        height: 100% !important;
 
         li{
+            z-index: 7;
+
             .caption{
                 // text-shadow: 1px 0 0 #242424, -1px 0 0 #242424, 0 1px 0 #242424, 0 -1px 0 #242424, 1px 1px #242424, -1px -1px 0 #242424, 1px -1px 0 #242424, -1px 1px 0 #242424;                // bottom: 0;
                 // top: initial;
@@ -349,5 +351,19 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
 
     .indicator-item.active{
         background-color:#0288d1 !important;
+    }
+    .indicator-item{
+        z-index: 8;
+    }
+
+}
+
+@media screen and (min-width: 1400px) {
+    .slider{
+        height: 400px !important;
+
+        .slides{
+            height: 100% !important;
+        }
     }
 }
