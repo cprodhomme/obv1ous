@@ -194,6 +194,7 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
 .team{
 
     .card{
+            overflow: inherit;
         .team-green{
             background-color: #43a047;
         }
