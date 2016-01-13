@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 teamMemberData = [
-{name: 'Gaviil', color: 'orange', avatar_color: 'orange', description: 'Moi ça va, si j\'écoute pas les voix qui me parle.<br>Ps: TA RACE', rank_cs: 'Master Guardian 1', rank_lol: 'Gold 5', role_cs: 'Open Frag', role_lol: 'Support'}, 
+{name: 'Gaviil', color: 'orange', avatar_color: 'orange', description: 'Moi ça va, si j\'écoute pas les voix qui me parle.<br>Ps: TA RACE', rank_cs: 'Master Guardian 1', rank_lol: 'Gold 5', role_cs: 'Open Frag', role_lol: 'Support'},
 {name: 'Cle61', color: 'green', avatar_color: 'green', description: ' ', rank_cs: 'Master Guardian 1', rank_lol: '', role_cs: 'Support', role_lol: ''},
 {name: 'Sweubi', color: 'blue', avatar_color: 'blue', description: 'ave caesar morituri te salutant', rank_cs: 'Master Guardian 1', rank_lol: 'Platine 4', role_cs: 'Open frag', role_lol: 'ADC'},
 {name: 'Haareen', color: 'yellow', avatar_color: 'yellow', description: ' ', rank_cs: 'Gold Nova 3', rank_lol: '', role_cs: 'Support', role_lol: ''},
@@ -39,15 +39,15 @@ teamMemberGamesData = [
 ]
 
 teamMemberWeaponsData = [
-{team_member_id: 1, name_weapon: 'AK-47'},
-{team_member_id: 1, name_weapon: 'AWP'},
-{team_member_id: 1, name_weapon: 'Desert_Eagle'},
+{team_member_id: 1, name_weapon: 'AK-47_aqua'},
+{team_member_id: 1, name_weapon: 'AWP_dieux'},
+{team_member_id: 1, name_weapon: 'Five-seven_singe'},
 {team_member_id: 2, name_weapon: 'M4A4'},
-{team_member_id: 2, name_weapon: 'P90'},
-{team_member_id: 2, name_weapon: 'XM1014'},
-{team_member_id: 3, name_weapon: 'AK-47'},
-{team_member_id: 3, name_weapon: 'M4A4'},
-{team_member_id: 3, name_weapon: 'AWP'}
+{team_member_id: 2, name_weapon: 'P90_module'},
+{team_member_id: 2, name_weapon: 'XM1014_mercure'},
+{team_member_id: 3, name_weapon: 'AK-47_redline'},
+{team_member_id: 3, name_weapon: 'M4A4_roi'},
+{team_member_id: 3, name_weapon: 'AWP_dieux'}
 ]
 
 if TeamMember.count == 0
@@ -73,7 +73,7 @@ if Roulette.count == 0
 		end
 
 		if strats_hash['T'] == 'X'
-			Roulette.create!(name: strats_hash['Titre'], strat: strats_hash['Strat'], team: 'T')			
+			Roulette.create!(name: strats_hash['Titre'], strat: strats_hash['Strat'], team: 'T')
 		end
 	end
 
@@ -88,7 +88,7 @@ if Rails.env.development?
 	end
 
 	# On crée un article
-	if News.count == 0 
+	if News.count == 0
 		News.create!(title: 'article exemple', summary: 'résumé de l\'article', content: 'texte de l\'article', image: 'news2.png')
 		puts '-> Ajoût d\'un article'
 	end
@@ -96,11 +96,10 @@ elsif Rails.env.production?
 	adminUser = ['Cle61', 'Gaviil', 'Sweubi']
 	adminUser.each do |username|
 		user = User.where(username: username)
-		
+
 		if user.count != 0 && user.first.admin == 0
 			user.first.update_attributes!(admin: 1)
 			puts '-> ' + username + 'ajouté en administrateur'
 		end
 	end
 end
-

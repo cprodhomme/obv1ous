@@ -57,7 +57,7 @@
                        <tbody>
                             <tr>
                                 <% @weapons.each do |weapon| %>
-                                    <td><%= image_tag("weapon/#{weapon.name_weapon}.png") %></td>
+                                    <td><%= image_tag("weapon/#{weapon.name_weapon}.png", class: 'materialboxed') %></td>
                                 <% end %>
                             </tr>
                         </tbody>
@@ -76,5 +76,7 @@
 <script>
 $(document).ready(function(){
     $('ul.tabs').tabs();
+    $('.materialboxed').materialbox();
   });
+
 </script>
