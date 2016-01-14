@@ -15,7 +15,7 @@
                   <ul class="tabs">
                     <li class="tab col s3"><a href="#showPlayer1">Jeux</a></li>
                     <li class="tab col s3"><a href="#showPlayer2">Infos</a></li>
-                    <li class="tab col s3 disabled"><a href="#showPlayer3">API Stats</a></li>
+                    <li class="tab col s3"><a href="#showPlayer3">API Stats</a></li>
                   </ul>
                 </div>
                 <div id="showPlayer1" class="col s12 infojoueur">
@@ -75,6 +75,16 @@
 
 <script>
 $(document).ready(function(){
+
+    $.ajax({
+      url: "http://api.steampowered.com/ISteamUserStats/GetUserStatsForGame/v0002/?appid=730&key=400CE5B4A6702A1A9EFD2822BC461A9D&steamid=76561198064635221",
+      method: "GET",
+      dataType: "JSON"
+    })
+      .done(function() {
+        console.log('toto');
+    });
+
     $('ul.tabs').tabs();
     $('.materialboxed').materialbox();
   });
