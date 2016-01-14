@@ -101,7 +101,9 @@ header{
 **********************/
 .content{
     // background: #fff;
-
+    .card{
+        overflow: inherit;
+    }
     .card-title{
         padding-left: 0px !important;
         // background-color: rgba(0, 0, 0, 0.7);
