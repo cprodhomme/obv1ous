@@ -1,10 +1,9 @@
 require "rails_helper"
 
 RSpec.feature "Roulette", :type => :feature do
-	scenario "Un utilisateur veux voir une stratroulette CT" do
+	scenario "Un utilisateur va sur la page roulette" do
 		visit roulette_index_path
 
-		click_button "CT"
-
+		expect(page).to have_text("Strat Roulette")
 	end
 end
