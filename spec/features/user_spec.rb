@@ -1,14 +1,10 @@
 require "rails_helper"
 
 describe 'Utilisateur', type: :feature do
-  	let!(:user) { create :user }
-
-    before :each do
-		create_account_and_log_in user
-	end
+  	let!(:user) { FactoryGirl.create :user }
 
   	scenario "ne peut pas accèder à l'interface admin" do
     	visit admin_path
-    	expect(current_path).to eq index_path
+    	expect(current_path).to eq root_path
   	end
 end
