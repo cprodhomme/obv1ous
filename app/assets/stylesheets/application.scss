@@ -104,17 +104,20 @@ header{
     .card{
         overflow: inherit;
     }
-    .card-title{
-        padding-left: 0px !important;
-        // background-color: rgba(0, 0, 0, 0.7);
-        background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9));
-        width: 100%;
-        padding: 10px !important;
-        padding-top: 40px !important;
-
-        a{
+    .card-image{
+        .card-title{
+            padding-left: 0px !important;
+            // background-color: rgba(0, 0, 0, 0.7);
+            background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9));
+            width: 100%;
             padding: 10px;
-            color: #fff;
+            padding-top: 40px;
+            bottom: 6px ;
+
+            a{
+                padding: 10px;
+                color: #fff;
+            }
         }
     }
     .TwitchIndex{
@@ -125,13 +128,24 @@ header{
             width:100%;
         }
     }
+    .team{
+        .card{
+            margin:10px 0;
+            .card-action{
+
+                a{
+                    color: #757575 !important;
+                }
+            }
+        }
+    }
     .card{
         margin:10px 0;
 
         .card-action{
 
             a{
-                color: #757575 !important;
+                // color: #757575 !important;
             }
         }
     }
