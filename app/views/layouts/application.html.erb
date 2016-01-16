@@ -39,7 +39,6 @@
     <meta name="msapplication-TileImage" content="<%= image_url '/mstile-144x144.png' %>">
     <meta name="theme-color" content="#ffffff">
 
-
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -55,7 +54,7 @@
         <header>
             <div class="header-background" id="port">
                 <div class="logo_obv">
-                    <%= image_tag('logo-trans.png', class: 'menu_icon') %>
+                    <%= image_tag('logo-trans.png', class: 'menu_icon', alt: "logo Obv1ous") %>
                 </div>
             </div>
 
@@ -160,6 +159,7 @@
     <script>
         jQuery(document).ready(function(){
             $(".button-collapse").sideNav(); //nav mobile
+             $('.slider').slider({full_width: false});
         });
     </script>
 </body>

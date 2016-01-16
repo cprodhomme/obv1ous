@@ -68,4 +68,6 @@ group :development, :test do
 
   # Use Rspec Rails
   gem 'rspec-rails', '~> 3.0'
+  gem 'capybara'
+  gem 'factory_girl_rails'
 end
