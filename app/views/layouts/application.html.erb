@@ -54,7 +54,9 @@
         <header>
             <div class="header-background" id="port">
                 <div class="logo_obv">
-                    <%= image_tag('logo-trans.png', class: 'menu_icon', alt: "logo Obv1ous") %>
+                    <%= link_to root_path do %>
+                        <%= image_tag('logo-trans.png', class: 'menu_icon', alt: "logo Obv1ous") %>
+                    <% end %>
                 </div>
             </div>
 

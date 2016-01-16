@@ -2,14 +2,24 @@
 <div class="row">
     <div class="col s12 m12 l12">
             <div class="showPlayer">
-                <div class="picture">
-                    <%= image_tag("team-ico/#{@member.avatar_color}.png", :class => "circle") %>
+                <div class="row">
+                    <div class="col s12 hide-on-med-and-up">
+                        <%= link_to "Retour",team_index_path, :class => 'right btn waves-effect waves-light' %>
+                    </div>
+                    <div class="col m10 s12">
+                        <div class="picture">
+                            <%= image_tag("team-ico/#{@member.avatar_color}.png", :class => "circle") %>
+                        </div>
+                        <span><%= @member.name %></span>
+                        <p class="descri">
+                            <%= @member.description.html_safe %>
+                        </p>
+                    </div>
+                    <div class="col m2 hide-on-small-only">
+                        <!-- <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a> -->
+                        <%= link_to "Retour",team_index_path, :class => 'right btn waves-effect waves-light' %>
+                    </div>
                 </div>
-                <span><%= @member.name %></span>
-                <p class="descri">
-                    <%= @member.description.html_safe %>
-                </p>
-
                 <div class="row">
                 <div class="col s12">
                   <ul class="tabs">
