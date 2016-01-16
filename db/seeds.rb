@@ -35,7 +35,9 @@ teamMemberGamesData = [
 {team_member_id: 4, name_game: 'minecraft'},
 {team_member_id: 5, name_game: 'minecraft'},
 {team_member_id: 1, name_game: 'rust'},
-{team_member_id: 2, name_game: 'rust'}
+{team_member_id: 2, name_game: 'rust'},
+{team_member_id: 2, name_game: 'clicker'},
+{team_member_id: 5, name_game: 'clicker'}
 ]
 
 teamMemberWeaponsData = [
