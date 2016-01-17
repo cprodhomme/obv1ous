@@ -101,12 +101,18 @@ header{
 **********************/
 .content{
     // background: #fff;
+    .title_section{
+        font-size: 40px;
+    }
+    .roulette{
+        text-align: center;
+    }
     .card{
         overflow: inherit;
     }
     .card-image{
         .card-title{
-            padding-left: 0px !important;
+            padding-left: 0px;
             // background-color: rgba(0, 0, 0, 0.7);
             background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9));
             width: 100%;
@@ -134,7 +140,7 @@ header{
             .card-action{
 
                 a{
-                    color: #757575 !important;
+                    color: #757575;
                 }
             }
         }
