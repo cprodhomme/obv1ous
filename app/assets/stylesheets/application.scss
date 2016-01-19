@@ -138,7 +138,14 @@ header{
         .card{
             margin:10px 0;
             .card-action{
+                padding-bottom:0px;
 
+                .icoinfoplayer{
+                    color: #757575;
+                }
+                .icoinfoplayer:hover{
+                    color: #C0C0C0;
+                }
                 a{
                     color: #757575;
                 }
@@ -233,7 +240,10 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
         }
 
         .card-action{
-            text-align: right;
+            .nameplayer{
+                text-align: right;
+            }
+
         }
     }
     .card-color{

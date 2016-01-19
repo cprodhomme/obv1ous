@@ -13,7 +13,16 @@
                         <%= image_tag("team-ico/#{players.avatar_color}.png", :class => "circle") %>
                     </div>
                     <div class="card-action">
-                        <%= link_to players.name , team_path(players.id) %>
+                        <div class="row">
+                            <div class="col s6">
+                                <i class="material-icons icoinfoplayer" title="Capitain">stars</i>
+                                <i class="material-icons icoinfoplayer" title="Tryhard">group</i>
+                                <i class="material-icons icoinfoplayer" title="Fun">mood</i>
+                            </div>
+                            <div class="col s6 nameplayer">
+                                <%= link_to players.name , team_path(players.id) %>
+                            </div>
+                        </div>
                     </div>
                   </div>
                 </div>
