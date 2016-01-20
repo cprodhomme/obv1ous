@@ -25,7 +25,9 @@
 .bold {
     font-weight: bold;
 }
-
+.clear{
+    clear: both;
+}
 body {
   display: flex;
   min-height: 100vh;
@@ -140,14 +142,22 @@ header{
             .card-action{
                 padding-bottom:0px;
 
-                .icoinfoplayer{
-                    color: #757575;
-                }
-                .icoinfoplayer:hover{
-                    color: #C0C0C0;
-                }
-                a{
-                    color: #757575;
+                .row{
+                    padding-bottom: 15px;
+
+                    .nameplayer{
+                        float: right;
+                    }
+                    .icoinfoplayer{
+                        color: #757575;
+                        cursor: default;
+                    }
+                    .icoinfoplayer:hover{
+                        color: #C0C0C0;
+                    }
+                    a{
+                        color: #757575;
+                    }
                 }
             }
         }
