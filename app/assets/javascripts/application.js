@@ -17,16 +17,6 @@
 
 $( document ).ready(function() {
 
-    // var heigthScreen = $( document ).height();
-    // var heigthContent = $("body").height();
-    //
-    // if(heigthContent < heigthScreen){
-    //     $(".page-footer").css("position","fixed");
-    // }
-    // else {
-    //     $(".page-footer").css("position","relative");
-    // }
-
 
 var k = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65],
 n = 0;
@@ -47,17 +37,10 @@ $(document).keydown(function (e) {
     }
 });
 
+    $(".icoinfoplayer").hover(function(){
+        $(this).parent().find(".infoPlayer").text($(this).attr('data'));
+    },function(){
+        $(this).parent().find(".infoPlayer").text("");
+    });
+
 });
-
-
-// $( window ).resize(function() {
-//     var heigthScreen = $( document ).height();
-//     var heigthContent = $("body").height();
-//
-//     if(heigthContent < heigthScreen){
-//         $(".page-footer").css("position","fixed");
-//     }
-//     else {
-//         $(".page-footer").css("position","relative");
-//     }
-// });

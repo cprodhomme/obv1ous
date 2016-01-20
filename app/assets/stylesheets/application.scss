@@ -145,6 +145,12 @@ header{
                 .row{
                     padding-bottom: 15px;
 
+                    .infoPlayer{
+                        line-height: initial;
+                        font-size: 12px;
+                        font-weight: bold;
+                        color: #C0C0C0;
+                    }
                     .nameplayer{
                         float: right;
                     }
@@ -368,9 +374,4 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
 .img-avatar{
     width:100%;
     text-align: center;
-}
-.infoTeam{
-    span{
-        color:#43a047;
-    }
 }
