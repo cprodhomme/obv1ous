@@ -20,82 +20,132 @@
                     </div>
                 </div>
                 <div class="row">
-                <div class="col s12">
-                  <ul class="tabs">
-                    <li class="tab col s3"><a href="#showPlayer1">Jeux</a></li>
-                    <li class="tab col s3"><a href="#showPlayer2">Infos</a></li>
-                    <li class="tab col s3 disabled"><a href="#showPlayer3">API Stats</a></li>
-                  </ul>
-                </div>
-                <div id="showPlayer1" class="col s12 infojoueur">
-                    <div class="games">
-                        <% @games.each do |game| %>
-                            <div class="col l4 m6 s12">
-                                <%= image_tag("games/#{game.name_game}.png") %>
+                    <div class="col s12">
+                      <ul class="tabs">
+                        <li class="tab col s3"><a href="#showPlayer1">Jeux</a></li>
+                        <li class="tab col s3"><a href="#showPlayer2">Infos</a></li>
+                        <li class="tab col s3 disabled"><a href="#showPlayer3">API Stats</a></li>
+                      </ul>
+                    </div>
+                    <div id="showPlayer1" class="col s12 infojoueur">
+                        <div class="games">
+                            <% @games.each do |game| %>
+                                <div class="col l4 m6 s12">
+                                    <%= image_tag("games/#{game.name_game}.png") %>
+                                </div>
+                            <% end %>
+                        </div>
+                    </div>
+                    <div id="showPlayer2" class="col s12 infojoueur">
+                        <div class="col s12 m6 l6">
+                            <table>
+                            <thead>
+                                 <tr>
+                                     <th>Infos Perso</th>
+                                 </tr>
+                           </thead>
+                           <tbody>
+                                <tr>
+                                    <td>Grade</td><td><%= @member.rank_cs %></td>
+                                </tr>
+                                <tr>
+                                    <td>Role</td><td><%= @member.role_cs %></td>
+                                </tr>
+
+                            </tbody>
+                            </table>
+                        </div>
+
+                        <div class="col s12 m6 nopad">
+                            <table>
+                            <thead>
+                                 <tr>
+                                     <th>Armes</th>
+                                 </tr>
+                           </thead>
+                           <tbody>
+                                <tr>
+                                    <% @weapons.each do |weapon| %>
+                                        <td><%= image_tag("weapon/#{weapon.name_weapon}.png", class: 'materialboxed') %></td>
+                                    <% end %>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <div id="showPlayer3" class="col s12 infojoueur">
+                        <div class="row">
+                            <div class="col s12 m6">
+                                <table class="bordered striped InfoFullTime">
+                                   <thead>
+                                     <tr>
+                                         <th data-field="id">Stats Général</th>
+                                         <th class='right-align' data-field="name"></th>
+                                     </tr>
+                                   </thead>
+
+                                   <tbody>
+                                     <tr>
+                                       <td>Victimes</td>
+                                       <td class='right-align'>13416</td>
+                                     </tr>
+                                     <tr>
+                                       <td>Morts</td>
+                                       <td class='right-align'>14311</td>
+                                     </tr>
+                                     <tr>
+                                       <td>Ratio</td>
+                                       <td class='right-align'>1</td>
+                                     </tr>
+                                     <tr>
+                                       <td>Meilleur joueur</td>
+                                       <td class='right-align'>1674</td>
+                                     </tr>
+                                     <tr>
+                                       <td>ratio mvp</td>
+                                       <td class='right-align'>10%</td>
+                                     </tr>
+                                   </tbody>
+                                 </table>
+
                             </div>
-                        <% end %>
+
+                            <div class="col s12 m6">
+                                <table class="bordered striped InfoFullTime">
+                                   <thead>
+                                     <tr>
+                                         <th data-field="id">Derniere partie</th>
+                                         <th class='right-align' data-field="name"></th>
+                                     </tr>
+                                   </thead>
+
+                                   <tbody>
+                                     <tr>
+                                       <td>Victimes</td>
+                                       <td class='right-align'>12</td>
+                                     </tr>
+                                     <tr>
+                                       <td>Morts</td>
+                                       <td class='right-align'>11</td>
+                                     </tr>
+                                     <tr>
+                                       <td>MVP</td>
+                                       <td class='right-align'>2</td>
+                                     </tr>
+                                   </tbody>
+                                 </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div id="showPlayer2" class="col s12 infojoueur">
-                    <div class="col s12 m6 l6">
-                        <table>
-                        <thead>
-                             <tr>
-                                 <th>Infos Perso</th>
-                             </tr>
-                       </thead>
-                       <tbody>
-                            <tr>
-                                <td>Grade</td><td><%= @member.rank_cs %></td>
-                            </tr>
-                            <tr>
-                                <td>Role</td><td><%= @member.role_cs %></td>
-                            </tr>
-
-                        </tbody>
-                        </table>
-                    </div>
-
-                    <div class="col s12 m6 nopad">
-                        <table>
-                        <thead>
-                             <tr>
-                                 <th>Armes</th>
-                             </tr>
-                       </thead>
-                       <tbody>
-                            <tr>
-                                <% @weapons.each do |weapon| %>
-                                    <td><%= image_tag("weapon/#{weapon.name_weapon}.png", class: 'materialboxed') %></td>
-                                <% end %>
-                            </tr>
-                        </tbody>
-                        </table>
-                    </div>
-
-                </div>
-                <div id="showPlayer3" class="col s12 infojoueur">
-                    <%= @member.id_steam %>
-                </div>
-              </div>
             </div>
     </div>
 </div>
-
 <script>
+
 $(document).ready(function(){
 
-    $.ajax({
-      url: "http://api.steampowered.com/ISteamUserStats/GetUserStatsForGame/v0002/?appid=730&key=400CE5B4A6702A1A9EFD2822BC461A9D&steamid=76561198064635221",
-      method: "GET",
-      dataType: "JSON"
-    })
-      .done(function() {
-        console.log('toto');
-    });
-
-    $('ul.tabs').tabs();
-    $('.materialboxed').materialbox();
-  });
+});
 
 </script>
