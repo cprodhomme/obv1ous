@@ -7,12 +7,12 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 teamMemberData = [
-{name: 'Gaviil', color: 'orange', avatar_color: 'orange', description: 'Moi ça va, si j\'écoute pas les voix qui me parle.<br>Ps: TA RACE', rank_cs: 'Master Guardian 1', rank_lol: 'Gold 5', role_cs: 'Open Frag', role_lol: 'Support'},
-{name: 'Cle61', color: 'green', avatar_color: 'green', description: ' ', rank_cs: 'Master Guardian 1', rank_lol: '', role_cs: 'Support', role_lol: ''},
-{name: 'Sweubi', color: 'blue', avatar_color: 'blue', description: 'ave caesar morituri te salutant', rank_cs: 'Master Guardian 1', rank_lol: 'Platine 4', role_cs: 'Open frag', role_lol: 'ADC'},
-{name: 'Triiiple_Tchiiip', color: 'yellow', avatar_color: 'red', description: ' ', rank_cs: 'Distinguished Master Guardian', rank_lol: '', role_cs: 'AWP', role_lol: ''},
-{name: 'Harreen', color: 'yellow', avatar_color: 'yellow', description: ' ', rank_cs: 'Gold Nova 3', rank_lol: '', role_cs: 'Support', role_lol: ''},
-{name: 'Rom', color: 'purple', avatar_color: 'pink', description: ' ', rank_cs: 'Gold Nova 1', rank_lol: '', role_cs: 'Support', role_lol: ''}
+{name: 'Gaviil',id_steam: '76561198064635221',color: 'orange', avatar_color: 'orange', description: 'Moi ça va, si j\'écoute pas les voix qui me parle.<br>Ps: TA RACE', rank_cs: 'Master Guardian 1', rank_lol: 'Gold 5', role_cs: 'Open Frag', role_lol: 'Support'},
+{name: 'Cle61',id_steam: '76561198057820388', color: 'green', avatar_color: 'green', description: ' ', rank_cs: 'Master Guardian 1', rank_lol: '', role_cs: 'Support', role_lol: ''},
+{name: 'Sweubi',id_steam: '76561198060575902', color: 'blue', avatar_color: 'blue', description: 'ave caesar morituri te salutant', rank_cs: 'Master Guardian 1', rank_lol: 'Platine 4', role_cs: 'Open frag', role_lol: 'ADC'},
+{name: 'Triiiple_Tchiiip',id_steam: '76561198125896249', color: 'yellow', avatar_color: 'red', description: ' ', rank_cs: 'Distinguished Master Guardian', rank_lol: '', role_cs: 'AWP', role_lol: ''},
+{name: 'Harreen',id_steam: '76561198201786950', color: 'yellow', avatar_color: 'yellow', description: '', rank_cs: 'Gold nova1', rank_lol: '', role_cs: 'open_frag', role_lol: ''},
+{name: 'Rom',id_steam: '76561198112854007', color: 'purple', avatar_color: 'pink', description: ' ', rank_cs: 'Gold Nova 1', rank_lol: '', role_cs: 'Support', role_lol: ''}
 ]
 
 teamMemberGamesData = [
