@@ -39,8 +39,12 @@ $(document).keydown(function (e) {
 
     $(".icoinfoplayer").hover(function(){
         $(this).parent().find(".infoPlayer").text($(this).attr('data'));
+        $(this).parent().find(".infoPlayer").show();
+
     },function(){
         $(this).parent().find(".infoPlayer").text("");
+        $(this).parent().find(".infoPlayer").hide();
+
     });
 
 });
