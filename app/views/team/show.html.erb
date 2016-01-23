@@ -24,7 +24,7 @@
                       <ul class="tabs">
                         <li class="tab col s3"><a href="#showPlayer1">Jeux</a></li>
                         <li class="tab col s3"><a href="#showPlayer2">Infos</a></li>
-                        <li class="tab col s3 disabled"><a href="#showPlayer3">API Stats</a></li>
+                        <li class="tab col s3"><a href="#showPlayer3">API Stats</a></li>
                       </ul>
                     </div>
                     <div id="showPlayer1" class="col s12 infojoueur">
@@ -72,7 +72,6 @@
                             </tbody>
                             </table>
                         </div>
-
                     </div>
                     <div id="showPlayer3" class="col s12 infojoueur">
                         <div class="row">
@@ -88,23 +87,31 @@
                                    <tbody>
                                      <tr>
                                        <td>Victimes</td>
-                                       <td class='right-align'>13416</td>
+                                       <td class='right-align'><%= @total_kill %></td>
                                      </tr>
                                      <tr>
                                        <td>Morts</td>
-                                       <td class='right-align'>14311</td>
+                                       <td class='right-align'><%= @total_death %></td>
                                      </tr>
                                      <tr>
                                        <td>Ratio</td>
-                                       <td class='right-align'>1</td>
+                                       <td class='right-align'><%= @ratioKD %></td>
+                                     </tr>
+                                     <tr>
+                                       <td>Victimes par round</td>
+                                       <td class='right-align'><%= @killByRound %></td>
                                      </tr>
                                      <tr>
                                        <td>Meilleur joueur</td>
-                                       <td class='right-align'>1674</td>
+                                       <td class='right-align'><%= @total_mvps %></td>
                                      </tr>
                                      <tr>
-                                       <td>ratio mvp</td>
-                                       <td class='right-align'>10%</td>
+                                       <td>Ratio meilleur joueur</td>
+                                       <td class='right-align'><%= ((@total_mvps*100)/@total_rounds_played.to_f).round(1) %>%</td>
+                                     </tr>
+                                     <tr>
+                                       <td>Headshot</td>
+                                       <td class='right-align'><%= ((@total_kills_headshot*100)/@total_kill.to_f).round(1) %>%</td>
                                      </tr>
                                    </tbody>
                                  </table>
@@ -123,15 +130,19 @@
                                    <tbody>
                                      <tr>
                                        <td>Victimes</td>
-                                       <td class='right-align'>12</td>
+                                       <td class='right-align'><%= @last_match_kills %></td>
                                      </tr>
                                      <tr>
                                        <td>Morts</td>
-                                       <td class='right-align'>11</td>
+                                       <td class='right-align'><%= @last_match_deaths %></td>
                                      </tr>
                                      <tr>
-                                       <td>MVP</td>
-                                       <td class='right-align'>2</td>
+                                       <td>Meilleur joueur</td>
+                                       <td class='right-align'><%= @last_match_mvps %></td>
+                                     </tr>
+                                     <tr>
+                                       <td>Score</td>
+                                       <td class='right-align'><%= @last_match_contribution_score %></td>
                                      </tr>
                                    </tbody>
                                  </table>
