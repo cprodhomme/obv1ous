@@ -24,7 +24,11 @@
                       <ul class="tabs">
                         <li class="tab col s3"><a href="#showPlayer1">Jeux</a></li>
                         <li class="tab col s3"><a href="#showPlayer2">Infos</a></li>
-                        <li class="tab col s3"><a href="#showPlayer3">API Stats</a></li>
+                        <% if(@member.id_steam != '') %>
+                            <li class="tab col s3"><a href="#showPlayer3">API Stats</a></li>
+                        <% else %>
+                            <li class="tab col s3 disabled"><a href="#showPlayer3">API Stats</a></li>
+                        <% end %>
                       </ul>
                     </div>
                     <div id="showPlayer1" class="col s12 infojoueur">
@@ -74,6 +78,7 @@
                         </div>
                     </div>
                     <div id="showPlayer3" class="col s12 infojoueur">
+                    <% if(@member.id_steam != '') %>
                         <div class="row">
                             <div class="col s12 m6">
                                 <table class="bordered striped InfoFullTime">
@@ -148,6 +153,7 @@
                                  </table>
                             </div>
                         </div>
+                        <% end %>
                     </div>
                 </div>
             </div>
