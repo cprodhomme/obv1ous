@@ -15,7 +15,8 @@ Obvious est un site communautaire pour une team e-sport de gaming sur Counter st
 ##Commandes :
 | Commande | Description |
 | --- | --- |
-| `rake import:stratroulette` | importe les stratroulettes  |
+| `./bin/build` | Prépare le projet  |
+| `rake import:stratroulette` | Importe les stratroulettes  |
 
 
 ##Screenshot
