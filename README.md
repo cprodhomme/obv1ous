@@ -12,6 +12,13 @@ Obvious est un site communautaire pour une team e-sport de gaming sur Counter st
 - http://obv1ous.fr
 
 
+##Commandes :
+| Commande | Description |
+| --- | --- |
+| `./bin/build` | Prépare le projet  |
+| `rake import:stratroulette` | Importe les stratroulettes  |
+
+
 ##Screenshot
 
 ![alt tag](http://quentinboussard.fr/img/folio/full/obv/obv-team2.jpg)
