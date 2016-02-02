@@ -179,7 +179,7 @@ header{
                     .icoinfoplayer:hover{
                         color: #C0C0C0;
                     }
-                    a{
+                    a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating){
                         color: #757575;
                     }
                 }
